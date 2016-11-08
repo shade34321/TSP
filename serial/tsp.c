@@ -36,7 +36,7 @@ void read_costs(char *filename, int numCities, int *cost) {
 void print_cost_matrix(int numCities, int *cost) {
     for (int i = 0; i < numCities; i++) {
         printf("%d", cost[numCities * i]);
-        for (int j = 0; j < numCities; j++) {
+        for (int j = 1; j < numCities; j++) {
             printf(" %d", cost[numCities * i + j]);
         }
         printf("\n"); //Add a new line after every row.
