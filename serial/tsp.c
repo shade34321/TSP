@@ -128,6 +128,11 @@ int convert_2d_location_to_1d(int rows, int i, int j) {
 void read_costs(char *filename, int numCities, int *cost) {
     FILE *fp = fopen(filename, "r");
 
+    if (fp == NULL) {
+        printf("Error in opening file! Terminating.....\n");
+        exit(1);
+    }
+
     // Grabbing the cost matrix from the file.
     // We don't do any error checking We could later on check to ensure the
     // cost matrix is right.
@@ -321,11 +326,21 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
+    best_path = (list *)malloc(sizeof(list));
+
+    if(!best_path) {
+        printf("Unable to allocate enough memory!\n");
+        //EXIT_FAILURE;
+        exit(1);
+    }
+
     init_list(best_path);
 
     read_costs(argv[1], numCities, cost);
     validate_cost_matrix(numCities, cost);
     print_cost_matrix(numCities, cost);
+
+    tsp(0, numCities, cost);
 
     free(cost);
 }
