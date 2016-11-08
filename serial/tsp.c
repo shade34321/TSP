@@ -251,6 +251,8 @@ int feasible(list *stack, int starting_city, int current_city) {
         if (tmp->x == starting_city && tmp->y == current_city) {
             can_add = 0;
         }
+
+        tmp = tmp->next;
     }
 
     return can_add;
