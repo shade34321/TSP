@@ -31,6 +31,29 @@ void read_costs(char *filename, int numCities, int *cost) {
 }
 
 /*
+ * Verifies the cost matrix that was inputted is in the correct format. 
+ * I dont' trust my copy and paste skills since initially there were a lot of
+ * formatting issues.
+ */
+void validate_cost_matrix(int numCities, int *cost) {
+    for (int i = 0; i < numCities; i++) {
+        for (int j = 0; j < numCities;j ++) {
+            //Make sure we have 0 cost for going to itself
+            if (i == j && cost[numCities * i + j] != 0) {
+               printf("Error in cost Matrix! Column %d Row %d is not 0...\n", i, j);
+               printf("Terminating....\n");
+               exit(1);
+            } else if (cost[numCities * i + j] != cost[numCities * j + i]) {
+                printf("Error in cost Matrix!\n");
+                printf("Column %d Row %d: %d\n", i, j, cost[numCities * i + j]);
+                printf("Column %d Row %d: %d\n", j, i, cost[numCities * j + i]);
+                exit(1);
+            }
+        }
+    }
+}
+
+/*
  * Prints out the cost matrix
  */
 void print_cost_matrix(int numCities, int *cost) {
@@ -55,7 +78,7 @@ int main(int argc, char *argv[]) {
     if (argc != 3) {
         print_usage(argc, argv);
         //EXIT_FAILURE;
-        return 1;
+        exit(1);
     }
 
     //Get total number of cities from command line
@@ -65,10 +88,11 @@ int main(int argc, char *argv[]) {
     if(!cost) {
         printf("Unable to allocate enough memory!\n");
         //EXIT_FAILURE;
-        return 1;
+        exit(1);
     }
 
     read_costs(argv[1], numCities, cost);
+    validate_cost_matrix(numCities, cost);
     print_cost_matrix(numCities, cost);
 
     free(cost);
