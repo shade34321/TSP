@@ -19,14 +19,30 @@ list *best_path;
 int best_tour = 65535; // set to a high number so we can set it on the first go round.
 
 /*
+ * Prints the city info
+ */
+void print_city(city *c) {
+    printf("City \n\tx: %d\n\ty: %d\n\tweight: %d\n", c->x, c->y, c->weight);
+}
+
+/*
  * Prints the list of the known good path
  */
 void print_list(list *singly){
     city *temp = singly->head;
 
+    if(!temp) {
+        printf("list is empty.");
+		return;
+    }
+
+	
     while(temp) {
-        printf("%d--->", temp->weight);
+        printf("%d", temp->weight);
         temp = temp->next;
+		if(temp) {
+			printf("-->");
+		}
     }
 
     printf("\n");
@@ -45,6 +61,10 @@ int empty(list *singly) {
     return 1;
 }
 
+/*
+ * Deletes the list
+ *
+ */
 void destroy(list *singly) {
     city *temp = singly->head;
 
@@ -90,6 +110,7 @@ void push(list *stack, int temp_x, int temp_y, int temp_weight) {
 void push_city(list *stack, city *new_city) {
     if (empty(stack)) {
         stack->head = new_city;
+		stack->head->next = NULL;
     } else {
         new_city->next = stack->head;
         stack->head = new_city;
@@ -103,7 +124,7 @@ void push_city(list *stack, city *new_city) {
 void copy_list(list *singly, list *copy) {
     city *temp, *temp1;
     temp = singly->head;
-
+    
     while(temp){
         temp1 = (city *)malloc(sizeof(city));
 
@@ -114,6 +135,7 @@ void copy_list(list *singly, list *copy) {
 
         temp1->x = temp->x;
         temp1->y = temp->y;
+        temp1->weight = temp->weight;
 
         push_city(copy, temp1);
         temp = temp->next;
@@ -336,6 +358,71 @@ void tsp(int starting_city, int numCities, int *cost) {
 
 }
 
+void test_methods() {
+    validate_cost_matrix(numCities, cost);
+    print_cost_matrix(numCities, cost);
+    
+    printf("best_path should be empty\n");
+    if(empty(best_path)) {
+        printf("best_path is empty\n");
+    } else {
+        printf("best_path is not empty\n");
+    }
+    
+    printf("Testing push\n");
+    push(best_path, 0,0,1);
+    push(best_path, 0,1,2);
+    push(best_path, 0,2,3);
+    city *temp = (city *)malloc(sizeof(city));
+    
+    if(!temp) {
+        printf("Unable to allocate enough memory!\n");
+        //EXIT_FAILURE;
+        exit(1);
+    }
+    
+    temp->x = 0;
+    temp->y = 3;
+    temp->weight = 4;
+    
+    printf("testing print_city\n");
+    print_city(temp);
+    
+    printf("Testing push_city\n");
+    push_city(best_path, temp);
+    
+    printf("best_path should not be empty\n");
+    if(empty(best_path)) {
+        printf("best_path is empty\n");
+    } else {
+        printf("best_path is not empty\n");
+    }
+    
+    print_list(best_path);
+    
+    printf("There should be 4 cities in the list: %d\n", num_cities(best_path));
+    printf("Testing remove city");
+    remove_city(best_path);
+    print_list(best_path);
+    
+    printf("Testing if we can add (0,1) into the list: %d\n", feasible(best_path, 0, 1));
+    
+    list *best_copy;
+    best_copy = (list *)malloc(sizeof(list));
+    
+    if(!best_copy) {
+        printf("Unable to allocate memory\n");
+        exit(1);
+    }
+    
+    init_list(best_copy);
+    
+    printf("Testing copy_list\n");
+    copy_list(best_path, best_copy);
+    print_list(best_path);
+    print_list(best_copy);
+}
+
 int main(int argc, char *argv[]) {
     if (argc != 3) {
         print_usage(argc, argv);
@@ -364,9 +451,10 @@ int main(int argc, char *argv[]) {
     init_list(best_path);
 
     read_costs(argv[1], numCities, cost);
-    validate_cost_matrix(numCities, cost);
-    print_cost_matrix(numCities, cost);
-
+    
+    
+    
+    
     tsp(0, numCities, cost);
 
     print_list(best_path);
