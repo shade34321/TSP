@@ -359,8 +359,6 @@ void tsp(int starting_city, int numCities, int *cost) {
 }
 
 void test_methods() {
-    validate_cost_matrix(numCities, cost);
-    print_cost_matrix(numCities, cost);
     
     printf("best_path should be empty\n");
     if(empty(best_path)) {
@@ -449,10 +447,12 @@ int main(int argc, char *argv[]) {
     }
 
     init_list(best_path);
+    validate_cost_matrix(numCities, cost);
+    print_cost_matrix(numCities, cost);
+
+	test_methods();
 
     read_costs(argv[1], numCities, cost);
-    
-    
     
     
     tsp(0, numCities, cost);
