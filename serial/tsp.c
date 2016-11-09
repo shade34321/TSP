@@ -29,7 +29,7 @@ void print_list(list *singly){
         temp = temp->next;
     }
 
-    printf("%d\n", singly->head->weight);
+    printf("\n");
 }
 
 /*
@@ -116,6 +116,7 @@ void copy_list(list *singly, list *copy) {
         temp1->y = temp->y;
 
         push_city(copy, temp1);
+        temp = temp->next;
     }
     
 }
@@ -284,7 +285,6 @@ void tsp(int starting_city, int numCities, int *cost) {
     init_list(&tmp_cities);
     init_list(&tmp_path);
 
-
     // We know the first and last city in the best path will the starting city
     // so we will add it now.
     push(&tmp_path, starting_city, starting_city, 0);
@@ -299,23 +299,26 @@ void tsp(int starting_city, int numCities, int *cost) {
 
     while (!empty(&tmp_cities)) {
         city *tmp = pop(&tmp_cities);
-        print_list(&tmp_cities);
 
         //If we've gone through all children
         if (tmp->x == -1) {
+            printf("Removing sentinel city.\n");
             remove_city(&tmp_path);
         } else {
             push_city(&tmp_path, tmp);
             if (num_cities(&tmp_path) == numCities) {
                 if( best_tour > get_current_weight(&tmp_path)) {
                     //We have a new best path
+                    printf("Num Cities in tmp_path list: %d\n", num_cities(&tmp_path));
                     print_list(&tmp_path);
                     best_tour = get_current_weight(&tmp_path);
+                    printf("Assigned best_tour\n");
                     if(best_path) {
                         destroy(best_path);
                     }
-                    
+                    printf("Destroyed best_path\n");
                     copy_list(&tmp_path, best_path);
+                    printf("Copying list\n");
                 }             
                 remove_city(&tmp_path);
             } else {
@@ -365,6 +368,8 @@ int main(int argc, char *argv[]) {
     print_cost_matrix(numCities, cost);
 
     tsp(0, numCities, cost);
+
+    print_list(best_path);
 
     free(cost);
 }
