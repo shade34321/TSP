@@ -21,10 +21,10 @@ int best_tour = 65535; // set to a high number so we can set it on the first go 
 /*
  * Prints the list of the known good path
  */
-void print_list(list *singly, int numCities){
+void print_list(list *singly){
     city *temp = singly->head;
 
-    for (int i = 0; i < numCities; i++) {
+    while(temp) {
         printf("%d--->", temp->weight);
         temp = temp->next;
     }
@@ -53,11 +53,8 @@ void destroy(list *singly) {
         temp = singly->head->next;
         free(singly->head);
         singly->head = temp;
-        temp = singly->head->next;
     }
 }
-
-
 
 /*
  * Initializes are doubly linked list so we can use it.
@@ -97,6 +94,30 @@ void push_city(list *stack, city *new_city) {
         new_city->next = stack->head;
         stack->head = new_city;
     }
+}
+
+/*
+ * Copies the list from one to another
+ * Provides a deep copy of the list
+ */
+void copy_list(list *singly, list *copy) {
+    city *temp, *temp1;
+    temp = singly->head;
+
+    while(temp){
+        temp1 = (city *)malloc(sizeof(city));
+
+        if(!temp1) {
+            printf("Unable to allocate memory!");
+            exit(1);
+        }
+
+        temp1->x = temp->x;
+        temp1->y = temp->y;
+
+        push_city(copy, temp1);
+    }
+    
 }
 
 /*
@@ -266,7 +287,6 @@ void tsp(int starting_city, int numCities, int *cost) {
 
     // We know the first and last city in the best path will the starting city
     // so we will add it now.
-    push(best_path, starting_city, starting_city, 0);
     push(&tmp_path, starting_city, starting_city, 0);
 
     // Allows us to start from any city
@@ -279,7 +299,8 @@ void tsp(int starting_city, int numCities, int *cost) {
 
     while (!empty(&tmp_cities)) {
         city *tmp = pop(&tmp_cities);
-        
+        print_list(&tmp_cities);
+
         //If we've gone through all children
         if (tmp->x == -1) {
             remove_city(&tmp_path);
@@ -288,12 +309,13 @@ void tsp(int starting_city, int numCities, int *cost) {
             if (num_cities(&tmp_path) == numCities) {
                 if( best_tour > get_current_weight(&tmp_path)) {
                     //We have a new best path
+                    print_list(&tmp_path);
                     best_tour = get_current_weight(&tmp_path);
-                    destroy(best_path);
-                    push(&tmp_path, starting_city, starting_city, 0);
-                    while(!empty(&tmp_path)){
-                        push_city(best_path, pop(&tmp_path));
+                    if(best_path) {
+                        destroy(best_path);
                     }
+                    
+                    copy_list(&tmp_path, best_path);
                 }             
                 remove_city(&tmp_path);
             } else {
