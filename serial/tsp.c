@@ -324,23 +324,17 @@ void tsp(int starting_city, int numCities, int *cost) {
 
         //If we've gone through all children
         if (tmp->x == -1) {
-            printf("Removing sentinel city.\n");
             remove_city(&tmp_path);
         } else {
             push_city(&tmp_path, tmp);
-            if (num_cities(&tmp_path) == numCities) {
+            if (num_cities(&tmp_path) == numCities + 1) {
                 if( best_tour > get_current_weight(&tmp_path)) {
                     //We have a new best path
-                    printf("Num Cities in tmp_path list: %d\n", num_cities(&tmp_path));
-                    print_list(&tmp_path);
                     best_tour = get_current_weight(&tmp_path);
-                    printf("Assigned best_tour\n");
                     if(best_path) {
                         destroy(best_path);
                     }
-                    printf("Destroyed best_path\n");
                     copy_list(&tmp_path, best_path);
-                    printf("Copying list\n");
                 }             
                 remove_city(&tmp_path);
             } else {
@@ -447,16 +441,17 @@ int main(int argc, char *argv[]) {
     }
 
     init_list(best_path);
-    validate_cost_matrix(numCities, cost);
-    print_cost_matrix(numCities, cost);
-
-	test_methods();
 
     read_costs(argv[1], numCities, cost);
+    //validate_cost_matrix(numCities, cost);
+    print_cost_matrix(numCities, cost);
+
+	//test_methods();
     
     
     tsp(0, numCities, cost);
 
+	printf("Best Path is:\n");
     print_list(best_path);
 
     free(cost);
