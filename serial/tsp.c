@@ -32,7 +32,7 @@ void print_list(list *singly){
     city *temp = singly->head;
 
     if(!temp) {
-        printf("list is empty.");
+        printf("list is empty.\n");
 		return;
     }
 
@@ -335,6 +335,7 @@ void tsp(int starting_city, int numCities, int *cost) {
                         destroy(best_path);
                     }
                     copy_list(&tmp_path, best_path);
+					print_list(best_path);
                 }             
                 remove_city(&tmp_path);
             } else {
@@ -343,13 +344,13 @@ void tsp(int starting_city, int numCities, int *cost) {
 
                 for (int i = numCities -1; i >= 0; i--) {
                     if(feasible(&tmp_path, starting_city, i)){
-                        push(&tmp_cities, starting_city, i, cost[numCities * starting_city + i]);
+                        push(&tmp_cities, tmp->x, i, cost[numCities * starting_city + i]);
                     }
                 }
             }
         }
     }
-
+	print_list(best_path);
 }
 
 void test_methods() {
