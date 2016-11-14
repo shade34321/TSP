@@ -31,7 +31,7 @@ void print_stack(stack *s) {
 			printf(" -> ");
 		}
 	
-		if ( i % 20 == 0) {
+		if ( i != 0 && i % 20 == 0) {
 			printf("\n");
 		}
 	}
