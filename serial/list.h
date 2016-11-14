@@ -9,7 +9,7 @@ typedef struct {
     int size;
 } stack;
 
-void init_stack(stack *s, int num_cities);
+stack * init_stack(int num_cities);
 void print_stack(stack *s);
 int empty(stack *s);
 void destroy_stack(stack *s);

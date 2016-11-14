@@ -1,7 +1,7 @@
 #include "list.h"
 
-void init_stack(stack *s, int num_cities) {
-    s = (stack *)malloc(sizeof(stack));
+stack * init_stack(int num_cities) {
+    stack *s = (stack *)malloc(sizeof(stack));
 
     if (!s) {
         printf("Unable to allocate enough memory to initialize stack.\n");
@@ -19,6 +19,8 @@ void init_stack(stack *s, int num_cities) {
 	}
 
 	s->size = 0;
+
+    return s;
 }
 
 void print_stack(stack *s) {
@@ -29,7 +31,7 @@ void print_stack(stack *s) {
 			printf(" -> ");
 		}
 	
-		if (i < s->size || i % 20 == 0) {
+		if ( i % 20 == 0) {
 			printf("\n");
 		}
 	}
