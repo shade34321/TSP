@@ -24,11 +24,14 @@ int main(int argc, char *argv[]) {
     print_cost_matrix();
     validate_cost_matrix();
 
-	city_tour *t = init_tour(0, 0);	
-	print_tour(t);
+	//city_tour *t = init_tour(0, 0);	
+	//print_tour(t);
 
 	city_tour *best_tour = init_tour(100000000, starting_city);
 	stack_DFS(best_tour, starting_city);
+
+	printf("Best Tour: \n");
+	print_tour(best_tour);
 }
 
 /*
@@ -125,34 +128,37 @@ void stack_DFS(city_tour *best_tour, int starting_city) {
 		}
 	}
 
-    printf("The stack before we process cities looks like...\n");
-    print_stack(s);
+    //printf("The stack before we process cities looks like...\n");
+    //print_stack(s);
 
 	while(!empty(s)) {
 		city = pop(s);
-	    printf("Processing city %d\n", city);	
+	        //printf("Processing city %d\n", city);	
 		if (city == -1) { //Sentinel value used to determine end of branch
-            printf("Removing city %d because it's a sentinel value.\n", city);
+		        //printf("Removing city %d because it's a sentinel value.\n", city);
 			remove_last_city(current_tour);
-            print_tour(current_tour);
+		        //print_tour(current_tour);
 		} else if (feasible(current_tour, best_tour, city)) {
-            printf("Adding city %d to the current tour\n", city);
+		        //printf("Adding city %d to the current tour\n", city);
 			add_city(current_tour, city);
-            print_tour(current_tour);
+		        //print_tour(current_tour);
 
 			if(current_tour->count == num_cities) {
-                printf("We'v reached the max amount of cities\n");
+				//printf("We've reached the max amount of cities\n");
 				//Do we have a better tour?
 				//if(best_tour->cost > ( current_tour->cost + cost(current_tour->cities[current_tour->count-1]))) {
 				if(feasible(current_tour, best_tour, starting_city)) {
-                    printf("We have the best tour!\n");
+					//printf("We have the best tour!\n");
 					copy_tour(current_tour, best_tour);
 					add_city(best_tour, starting_city);
-                    print_tour(best_tour);
+				    	//print_tour(best_tour);
+
+				} else {
+					//printf("We don't have the best tour!\n");
 				}
-	            printf("Removing last city from tour\n");			
+			        //printf("Removing last city from tour\n");			
 				remove_last_city(current_tour);
-                print_tour(current_tour);
+				//print_tour(current_tour);
 			} else {
 				//Lets add the rest of the cities to this branch
 				push(s, num_cities, -1);
@@ -161,9 +167,11 @@ void stack_DFS(city_tour *best_tour, int starting_city) {
 							push(s, num_cities, i); //Pushing on the stack backwards so we process the stack in order
 						}
 				}
-                printf("Current stack looks like...\n");
-                print_stack(s);
+			//printf("Current stack looks like...\n");
+			//print_stack(s);
 			}
+		} else {
+			//printf("Current path doesn't look good. Moving on.\n");
 		}
 	}
 
@@ -212,10 +220,10 @@ void destroy_tour(city_tour *tour) {
 }
 
 void print_tour(city_tour * tour) {
-	for(int i = 0; i < num_cities; i++) {
+	for(int i = 0; i < tour->count; i++) {
 		printf("%d", tour->cities[i]);
 
-		if( i < num_cities - 1) {
+		if( i < tour->count - 1) {
 			printf(" -> ");
 		}
 		

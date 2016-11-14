@@ -36,7 +36,7 @@ void print_stack(stack *s) {
 		}
 	}
 
-	printf("\nSize: %d\n", s->size);
+	printf("\nStack Size: %d\n", s->size);
 }
 
 int empty(stack *s) {
