@@ -1,20 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "city_tour.h"
+
 #ifndef list_h
 #define list_h
 
 typedef struct {
-    int *list;
+    void *list;
     int size;
 } stack;
 
-stack * init_stack(int num_cities);
+stack * init_stack(int num_cities, size_t data_size);
 void print_stack(stack *s);
 int empty(stack *s);
 void destroy_stack(stack *s);
-void push(stack *s, int num_cities, int c);
-int pop(stack *s);
+void push(stack *s, int num_cities, void * c);
+void * pop(stack *s);
 
-void test_stack();
 #endif

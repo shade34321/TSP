@@ -1,13 +1,13 @@
 #include "list.h"
 
-stack * init_stack(int num_cities) {
+stack * init_stack(int num_cities, size_t data_size) {
     stack *s = (stack *)malloc(sizeof(stack));
 
     if (!s) {
         printf("Unable to allocate enough memory to initialize stack.\n");
         exit(1);
     }
-    s->list = (int *)malloc(sizeof(int) * (num_cities * num_cities));
+    s->list = malloc(sizeof(data_size) * (num_cities * num_cities));
 
 	if (!s->list) {
 		printf("Unable to allocate enough memory for city list within the stack.\n");
@@ -15,7 +15,7 @@ stack * init_stack(int num_cities) {
 	}    
 
 	for (int i = 0; i < (num_cities * num_cities); i++) {
-		s->list[i] = -1;
+		s->list[i] = NULL;
 	}
 
 	s->size = 0;
@@ -46,7 +46,7 @@ void destroy_stack(stack *s) {
 	free(s->list);
 	free(s);
 }
-void push(stack *s, int num_cities, int c) {
+void push(stack *s, int num_cities, void * c) {
 	if ( s->size == num_cities * num_cities) {
 		printf("Shit done broke! You're trying to add more onto the stack than we allow.\n");
 		exit(1);
@@ -56,17 +56,15 @@ void push(stack *s, int num_cities, int c) {
 	(s->size)++;
 }
 
-int pop(stack *s) {
+void * pop(stack *s) {
 	if (s->size == 0) {
 		printf("Stack is empty! We done goofed.\n");
 		exit(1);
 	}
 
-	int temp = s->list[s->size-1];
+	void * temp = s->list[s->size-1];
 	s->list[s->size-1] = -1;
 	(s->size)--;
 
 	return temp;
 }
-
-void test_stack();
