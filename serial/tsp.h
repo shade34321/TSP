@@ -19,7 +19,7 @@ void validate_cost_matrix();
 void print_cost_matrix();
 void print_usage(int numarguments, char *args[]);
 void stack_DFS(city_tour *best_tour, int starting_city);
-
+void rec_DFS(city_tour *best_tour, city_tour *current_tour, int starting_city);
 int cost(int c1, int c2);
 
 city_tour * init_tour(int cost, int start_city);
