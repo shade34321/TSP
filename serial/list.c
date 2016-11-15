@@ -1,6 +1,9 @@
 #include "list.h"
 
-stack * init_stack(int num_cities, size_t data_size) {
+stack * init_stack(int num_cities, size_t ds, void * iv, print * pf) {
+    s->data_size = ds;
+    s->init_value = iv;
+    s->print = &pf;
     stack *s = (stack *)malloc(sizeof(stack));
 
     if (!s) {
@@ -15,7 +18,7 @@ stack * init_stack(int num_cities, size_t data_size) {
 	}    
 
 	for (int i = 0; i < (num_cities * num_cities); i++) {
-		s->list[i] = NULL;
+        memcpy(&(s->list[i*(s->data_size)]), s->init_value, s->data_size);
 	}
 
 	s->size = 0;
@@ -24,8 +27,8 @@ stack * init_stack(int num_cities, size_t data_size) {
 }
 
 void print_stack(stack *s) {
-	for(int i = 0; i < s->size; i++) {
-		printf("%d", s->list[i]);
+	for(int i = 0; i < s->size; i+=s->data_size) {
+        s->print(i); 
 		
 		if( i < s->size - 1) {
 			printf(" -> ");
@@ -37,6 +40,10 @@ void print_stack(stack *s) {
 	}
 
 	printf("\nStack Size: %d\n", s->size);
+}
+
+void print_int(void * i) {
+    printf("%d", *((int *)i)); 
 }
 
 int empty(stack *s) {
@@ -52,7 +59,7 @@ void push(stack *s, int num_cities, void * c) {
 		exit(1);
 	}
 
-	s->list[s->size] = c;
+    memcpy(&(s->list[ (s->size) * (s->data_size) ]), c, s->data_size);
 	(s->size)++;
 }
 
@@ -63,7 +70,7 @@ void * pop(stack *s) {
 	}
 
 	void * temp = s->list[s->size-1];
-	s->list[s->size-1] = -1;
+    memcpy(&(s->list[ (s->size-1) * (s->data_size) ]), s->init_value, s->data_size);
 	(s->size)--;
 
 	return temp;
