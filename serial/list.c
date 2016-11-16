@@ -69,4 +69,3 @@ int pop(stack *s) {
 	return temp;
 }
 
-void test_stack();
