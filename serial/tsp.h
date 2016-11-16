@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/time.h>
 
 #include "list.h"
 
@@ -12,6 +13,7 @@ void read_costs(char *filename);
 void validate_cost_matrix();
 void print_cost_matrix();
 void print_usage(int numarguments, char *args[]);
+double get_timestamp();
 void stack_DFS(city_tour *best_tour, int starting_city);
 void rec_DFS(city_tour *best_tour, city_tour *current_tour, int starting_city);
 

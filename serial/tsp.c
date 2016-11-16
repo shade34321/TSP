@@ -32,18 +32,25 @@ int main(int argc, char *argv[]) {
     printf("Recursive DFS\n");
     best_tour = init_tour(100000000, starting_city);
     city_tour *ct = init_tour(0, starting_city);
+    double rec_starttime = get_timestamp();
     rec_DFS(best_tour, ct, starting_city);
+    double rec_stoptime = get_timestamp();
+
     
     printf("Recursive Best Tour: \n");
     print_tour(best_tour);
     destroy_tour(best_tour);
+    printf("Recursive time: %f\n", rec_stoptime - rec_starttime);
     
     printf("Iterative 1\n");
     best_tour = init_tour(100000000, starting_city);
+    double iter_1_starttime = get_timestamp();
     stack_DFS(best_tour, starting_city);
+    double iter_1_endtime = get_timestamp();
     
     printf("Iterative 1 Best Tour: \n");
     print_tour(best_tour);
+    printf("Recursive time: %f\n", iter_1_endtime - iter_1_starttime);
 }
 
 /*
@@ -121,6 +128,12 @@ void print_cost_matrix() {
 void print_usage(int numarguments, char *args[]) {
     printf("To use this, please pass in the filename of the cost matrix and how many cities there are.\n");
     printf("%s, ${COST_MATRIX_FILENAME} ${NUM_CITIES}\n", args[0]);
+}
+
+double get_timestamp() {
+    struct timeval now;
+    gettimeofday(&now, NULL);
+    return now.tv_usec + (double)now.tv_sec * 1000000;
 }
 
 /*
