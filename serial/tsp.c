@@ -21,8 +21,8 @@ int main(int argc, char *argv[]) {
     }
 
     read_costs(argv[1]);
-    print_cost_matrix();
-    validate_cost_matrix();
+//    print_cost_matrix();
+//    validate_cost_matrix();
 
     //city_tour *t = init_tour(0, 0);	
     //print_tour(t);

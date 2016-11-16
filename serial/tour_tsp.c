@@ -21,13 +21,13 @@ int main(int argc, char *argv[]) {
     }
 
     read_costs(argv[1]);
-    print_cost_matrix();
-    validate_cost_matrix();
+//    print_cost_matrix();
+//    validate_cost_matrix();
 
     
     city_tour *best_tour = alloc_tour(); 
 
-    printf("Second Iterative 1\n");
+    printf("Second Iterative \n");
     init_tour(best_tour, 100000000, starting_city);
     double iter_2_starttime = get_timestamp();
     iter_DFS(best_tour, starting_city);
@@ -124,15 +124,13 @@ double get_timestamp() {
 void iter_DFS(city_tour *best_tour, int starting_city) {
 	int city;
 	stack *s = NULL;
-	stack *a = NULL;
 
-	city_tour *current_tour = alloc_tour();
-	init_tour(current_tour, 0, starting_city);
-	city_tour *temp_tour;
+	city_tour *temp_tour = alloc_tour();
+	init_tour(temp_tour, 0, starting_city);
+//	city_tour *temp_tour;
 
-	a = init_stack(num_cities);
 	s = init_stack(num_cities);
-	push(s, num_cities, current_tour); //Pushing a tour onto the stack. Here we go! 
+	push(s, num_cities, temp_tour); //Pushing a tour onto the stack. Here we go! 
 
 	while(!empty(s)) {
 		temp_tour = pop(s);
@@ -145,19 +143,16 @@ void iter_DFS(city_tour *best_tour, int starting_city) {
 			}
 		} else {
 			for (city = num_cities-1; city >= 0; city--) {
-				if( feasible(temp_tour, best_tour, city) && city != starting_city ) {
+				if( feasible(temp_tour, best_tour, city) && !visited(temp_tour, city) && city != starting_city ) {
 					add_city(temp_tour, city);
 					push(s, num_cities, temp_tour);
 					remove_last_city(temp_tour);
 				}
 			}
 		}
-
-		push(a, num_cities, temp_tour);	
 	}
 
 	//Make sure we don't have memory leaks
 	destroy_stack(s);
-	destroy_stack(a);
-	destroy_tour(current_tour);	
+	destroy_tour(temp_tour);	
 }
