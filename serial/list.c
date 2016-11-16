@@ -1,16 +1,13 @@
 #include "list.h"
 
-stack * init_stack(int num_cities, size_t ds, void * iv) {
-    s->data_size = ds;
-    s->init_value = iv;
-    s->print = &pf;
+stack * init_stack(int num_cities) {
     stack *s = (stack *)malloc(sizeof(stack));
 
     if (!s) {
         printf("Unable to allocate enough memory to initialize stack.\n");
         exit(1);
     }
-    s->list = malloc(sizeof(data_size) * (num_cities * num_cities));
+    s->list = (int *)malloc(sizeof(int) * (num_cities * num_cities));
 
 	if (!s->list) {
 		printf("Unable to allocate enough memory for city list within the stack.\n");
@@ -18,7 +15,7 @@ stack * init_stack(int num_cities, size_t ds, void * iv) {
 	}    
 
 	for (int i = 0; i < (num_cities * num_cities); i++) {
-        memcpy(&(s->list[i*(s->data_size)]), s->init_value, s->data_size);
+		s->list[i] = -1;
 	}
 
 	s->size = 0;
@@ -27,8 +24,8 @@ stack * init_stack(int num_cities, size_t ds, void * iv) {
 }
 
 void print_stack(stack *s) {
-	for(int i = 0; i < s->size; i+=s->data_size) {
-        s->list[ i * (s->data_size) ].print( s->list[ i * (s->data_size) ]);
+	for(int i = 0; i < s->size; i++) {
+		printf("%d", s->list[i]);
 		
 		if( i < s->size - 1) {
 			printf(" -> ");
@@ -42,10 +39,6 @@ void print_stack(stack *s) {
 	printf("\nStack Size: %d\n", s->size);
 }
 
-void print_int(my_int *mi) {
-    printf("%d", mi->data); 
-}
-
 int empty(stack *s) {
 	return (s->size == 0 ? 1 : 0);
 }
@@ -53,25 +46,27 @@ void destroy_stack(stack *s) {
 	free(s->list);
 	free(s);
 }
-void push(stack *s, int num_cities, void * c) {
+void push(stack *s, int num_cities, int c) {
 	if ( s->size == num_cities * num_cities) {
 		printf("Shit done broke! You're trying to add more onto the stack than we allow.\n");
 		exit(1);
 	}
 
-    memcpy(&(s->list[ (s->size) * (s->data_size) ]), c, s->data_size);
+	s->list[s->size] = c;
 	(s->size)++;
 }
 
-void * pop(stack *s) {
+int pop(stack *s) {
 	if (s->size == 0) {
 		printf("Stack is empty! We done goofed.\n");
 		exit(1);
 	}
 
-	void * temp = s->list[s->size-1];
-    memcpy(&(s->list[ (s->size-1) * (s->data_size) ]), s->init_value, s->data_size);
+	int temp = s->list[s->size-1];
+	s->list[s->size-1] = -1;
 	(s->size)--;
 
 	return temp;
 }
+
+void test_stack();
