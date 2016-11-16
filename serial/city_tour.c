@@ -35,6 +35,7 @@ city_tour * init_tour(int cost, int start_city) {
 	
 	tmp->cost = cost;
 	tmp->count = 1;	
+    tmp->print = &print_tour;
 
 	return tmp;
 }

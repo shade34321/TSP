@@ -1,6 +1,6 @@
 #include "list.h"
 
-stack * init_stack(int num_cities, size_t ds, void * iv, print * pf) {
+stack * init_stack(int num_cities, size_t ds, void * iv) {
     s->data_size = ds;
     s->init_value = iv;
     s->print = &pf;
@@ -28,7 +28,7 @@ stack * init_stack(int num_cities, size_t ds, void * iv, print * pf) {
 
 void print_stack(stack *s) {
 	for(int i = 0; i < s->size; i+=s->data_size) {
-        s->print(i); 
+        s->list[ i * (s->data_size) ].print( s->list[ i * (s->data_size) ]);
 		
 		if( i < s->size - 1) {
 			printf(" -> ");
@@ -42,8 +42,8 @@ void print_stack(stack *s) {
 	printf("\nStack Size: %d\n", s->size);
 }
 
-void print_int(void * i) {
-    printf("%d", *((int *)i)); 
+void print_int(my_int *mi) {
+    printf("%d", mi->data); 
 }
 
 int empty(stack *s) {

@@ -9,6 +9,7 @@ typedef struct {
     int *cities;
     int count;
     int cost;
+    void (*print_tour)(city_tour *tour);
 } city_tour;
 
 
