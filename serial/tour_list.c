@@ -54,16 +54,8 @@ void push(stack *s, int num_cities, city_tour *c) {
 		exit(1);
 	}
 
-	s->list[s->size] = alloc_tour();
 	copy_tour(c, &(s->list[s->size]));
     
-    //memcpy(&(s->list[s->size]), c, sizeof(city_tour));
-    /*
-    //hmm I need to store this
-    s->list[s->size] = alloc_tour(); //Apparenlyt the other way was a problem. Oops
-//    init_tour(tmp, -1); //Should only alloate the memory for the tour
-    copy_tour(c, &(s->list[s->size])); //Now makes our tour a clone so we can get rid of this
-    */
 	(s->size)++;
 }
 
