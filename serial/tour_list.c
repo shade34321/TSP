@@ -14,13 +14,14 @@ stack * init_stack(int num_cities) {
 		exit(1);
 	}    
 
-    city_tour *tmp = alloc_tour();
-    init_tour(tmp, -1, -1);
+	// city_tour *tmp = alloc_tour();
+	// init_tour(tmp, -1, -1);
 
 	for (int i = 0; i < (num_cities * num_cities); i++) {
-		memcpy(&(s->list[i]), tmp, sizeof(city_tour));
+		s->list[i] = *alloc_tour();
+		init_tour(&(s->list[i]), -1, -1);
+		// memcpy(&(s->list[i]), tmp, sizeof(city_tour));
 	}
-
 	s->size = 0;
 
     return s;
