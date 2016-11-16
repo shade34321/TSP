@@ -24,14 +24,26 @@ int main(int argc, char *argv[]) {
     print_cost_matrix();
     validate_cost_matrix();
 
-	//city_tour *t = init_tour(0, 0);	
-	//print_tour(t);
+    //city_tour *t = init_tour(0, 0);	
+    //print_tour(t);
+    
+    city_tour *best_tour = NULL; 
 
-	city_tour *best_tour = init_tour(100000000, starting_city);
-	stack_DFS(best_tour, starting_city);
-
-	printf("Best Tour: \n");
-	print_tour(best_tour);
+    printf("Recursive DFS\n");
+    best_tour = init_tour(100000000, starting_city);
+    city_tour *ct = init_tour(0, starting_city);
+    rec_DFS(best_tour, ct, starting_city);
+    
+    printf("Recursive Best Tour: \n");
+    print_tour(best_tour);
+    destroy_tour(best_tour);
+    
+    printf("Iterative 1\n");
+    best_tour = init_tour(100000000, starting_city);
+    stack_DFS(best_tour, starting_city);
+    
+    printf("Iterative 1 Best Tour: \n");
+    print_tour(best_tour);
 }
 
 /*
@@ -178,6 +190,26 @@ void stack_DFS(city_tour *best_tour, int starting_city) {
 	//Make sure we don't have memory leaks
 	destroy_stack(s);
 	destroy_tour(current_tour);	
+}
+
+void rec_DFS(city_tour *best_tour, city_tour *current_tour, int starting_city) {
+	int curr_city;
+
+	if(current_tour->count == num_cities) {
+		if(feasible(current_tour, best_tour, starting_city)) {
+			copy_tour(current_tour, best_tour);
+			add_city(best_tour, starting_city); // Add the starting city to the tour
+		}
+	} else {
+		for(curr_city = 0; curr_city < num_cities; curr_city++) {
+			//Does it lead to a better path, have we visited it yet? , Are we not the starting city?
+			if(feasible(current_tour, best_tour, curr_city) && !visited(current_tour, curr_city) && curr_city != starting_city) {
+				add_city(current_tour, curr_city);
+				rec_DFS(best_tour, current_tour, starting_city);
+				remove_last_city(current_tour);
+			}
+		}
+	}
 }
 
 /*
