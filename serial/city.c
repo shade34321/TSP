@@ -1,4 +1,4 @@
-#include "city_tour.h"
+#include "city.h"
 
 /*
  * Inititializes a tour for us so we can use it.

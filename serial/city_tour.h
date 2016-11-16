@@ -17,7 +17,7 @@ typedef struct {
 int cost(int c1, int c2);
 
 city_tour * alloc_tour();
-city_tour * init_tour(int cost, int start_city);
+void init_tour(city_tour *tmp, int cost, int start_city);
 void destroy_tour(city_tour *tour);
 void print_tour(city_tour *tour);
 void copy_tour(city_tour *t1, city_tour *t2);

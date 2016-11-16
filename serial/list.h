@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "city_tour.h"
+#include "city.h"
 
 #ifndef list_h
 #define list_h

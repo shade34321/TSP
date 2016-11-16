@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#ifndef city_tour_h
-#define city_tour_h
+#ifndef city_h
+#define city_h
 
 extern int *digraph;
 extern int num_cities;

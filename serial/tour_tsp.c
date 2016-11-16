@@ -25,10 +25,10 @@ int main(int argc, char *argv[]) {
     validate_cost_matrix();
 
     
-    city_tour *best_tour = NULL; 
+    city_tour *best_tour = alloc_tour(); 
 
     printf("Second Iterative 1\n");
-    best_tour = init_tour(100000000, starting_city);
+    init_tour(best_tour, 100000000, starting_city);
     double iter_2_starttime = get_timestamp();
     iter_DFS(best_tour, starting_city);
     double iter_2_endtime = get_timestamp();
@@ -126,7 +126,8 @@ void iter_DFS(city_tour *best_tour, int starting_city) {
 	stack *s = NULL;
 	stack *a = NULL;
 
-	city_tour *current_tour = init_tour(0, starting_city);
+	city_tour *current_tour = alloc_tour();
+    init_tour(current_tour, 0, starting_city);
     city_tour *temp_tour;
 
 	a = init_stack(num_cities);

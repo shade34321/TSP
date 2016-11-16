@@ -14,8 +14,11 @@ stack * init_stack(int num_cities) {
 		exit(1);
 	}    
 
+    city_tour *tmp = alloc_tour();
+    init_tour(tmp, -1, -1);
+
 	for (int i = 0; i < (num_cities * num_cities); i++) {
-		s->list[i] = NULL;
+        memcpy(&(s->list[i]), tmp, sizeof(city_tour));
 	}
 
 	s->size = 0;
@@ -38,9 +41,10 @@ int empty(stack *s) {
 	return (s->size == 0 ? 1 : 0);
 }
 void destroy_stack(stack *s) {
+    /*
     for(int i = 0; i < s->size; i++) {
         destroy_tour(&(s->list[i]));
-    }
+    }*/
 	free(s->list);
 	free(s);
 }

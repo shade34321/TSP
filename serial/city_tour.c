@@ -22,9 +22,7 @@ city_tour * alloc_tour(){
  * Inititializes a tour for us so we can use it.
  */
 
-city_tour * init_tour(int cost, int start_city) {
-    city_tour *tmp = alloc_tour();    
-
+void init_tour(city_tour * tmp, int cost, int start_city) {
     // Sets up our city tour for us.
     for(int i = 0; i < num_cities; i++) {
         if(i == start_city) {
@@ -36,8 +34,6 @@ city_tour * init_tour(int cost, int start_city) {
     
     tmp->cost = cost;
     tmp->count = 1;
-
-	return tmp;
 }
 
 void destroy_tour(city_tour *tour) {
