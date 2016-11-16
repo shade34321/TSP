@@ -1,6 +1,10 @@
 #include "city_tour.h"
 
-city_tour * alloc_tour(){
+/*
+ * Inititializes a tour for us so we can use it.
+ */
+
+city_tour * init_tour(int cost, int start_city) {
 	city_tour *tmp  = (city_tour *)malloc(sizeof(city_tour));
 
 	if(!tmp) {
@@ -15,27 +19,17 @@ city_tour * alloc_tour(){
 		exit(1);
 	}
 
-    return tmp;
-}
-
-/*
- * Inititializes a tour for us so we can use it.
- */
-
-city_tour * init_tour(int cost, int start_city) {
-    city_tour *tmp = alloc_tour();    
-
-    // Sets up our city tour for us.
-    for(int i = 0; i < num_cities; i++) {
-        if(i == start_city) {
-            tmp->cities[i] = 0;
-        } else {
-            tmp->cities[i] = -1;
-        }
-    }
-    
-    tmp->cost = cost;
-    tmp->count = 1;
+	// Sets up our city tour for us.
+	for(int i = 0; i < num_cities; i++) {
+		if(i == start_city) {
+			tmp->cities[i] = 0;
+		} else {
+			tmp->cities[i] = -1;
+		}
+	}
+	
+	tmp->cost = cost;
+	tmp->count = 1;	
 
 	return tmp;
 }
@@ -114,15 +108,4 @@ int feasible(city_tour *tour, city_tour *best_tour, int city) {
 	}
 
 	return 0;
-}
-
-void null_tour(city_tour *tour) {
-    if(tour->count != 0) {
-        for(int i = 0; i < tour->count; i++) {
-            tour->cities[i] = -1;
-        }
-    }
-    
-    tour->cost = -1;
-    tour->count = -1;
 }
