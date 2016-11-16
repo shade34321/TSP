@@ -127,8 +127,8 @@ void iter_DFS(city_tour *best_tour, int starting_city) {
 	stack *a = NULL;
 
 	city_tour *current_tour = alloc_tour();
-    init_tour(current_tour, 0, starting_city);
-    city_tour *temp_tour;
+	init_tour(current_tour, 0, starting_city);
+	city_tour *temp_tour;
 
 	a = init_stack(num_cities);
 	s = init_stack(num_cities);
@@ -136,24 +136,24 @@ void iter_DFS(city_tour *best_tour, int starting_city) {
 
 	while(!empty(s)) {
 		temp_tour = pop(s);
-        
-        //Do we hae enough cities in this tour?
-        if( temp_tour->count == num_cities) {
-            if(feasible(temp_tour, best_tour, starting_city)) {
-                copy_tour(temp_tour, best_tour);
-                add_city(best_tour, starting_city);
-            } else {
-                for (city = num_cities-1; city >= 0; city--) {
-                    if( feasible(temp_tour, best_tour, city) && city != starting_city ) {
-                        add_city(temp_tour, city);
-                        push(s, num_cities, temp_tour);
-                        remove_last_city(temp_tour);
-                    }
-                }
-            }
-        }
 
-        push(a, num_cities, temp_tour);	
+		//Do we hae enough cities in this tour?
+		if( temp_tour->count == num_cities) {
+			if(feasible(temp_tour, best_tour, starting_city)) {
+				copy_tour(temp_tour, best_tour);
+				add_city(best_tour, starting_city);
+			}
+		} else {
+			for (city = num_cities-1; city >= 0; city--) {
+				if( feasible(temp_tour, best_tour, city) && city != starting_city ) {
+					add_city(temp_tour, city);
+					push(s, num_cities, temp_tour);
+					remove_last_city(temp_tour);
+				}
+			}
+		}
+
+		push(a, num_cities, temp_tour);	
 	}
 
 	//Make sure we don't have memory leaks

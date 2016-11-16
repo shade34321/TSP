@@ -18,7 +18,7 @@ stack * init_stack(int num_cities) {
     init_tour(tmp, -1, -1);
 
 	for (int i = 0; i < (num_cities * num_cities); i++) {
-        memcpy(&(s->list[i]), tmp, sizeof(city_tour));
+		memcpy(&(s->list[i]), tmp, sizeof(city_tour));
 	}
 
 	s->size = 0;
@@ -53,8 +53,11 @@ void push(stack *s, int num_cities, city_tour *c) {
 		printf("Shit done broke! You're trying to add more onto the stack than we allow.\n");
 		exit(1);
 	}
+
+	s->list[s->size] = alloc_tour();
+	copy_tour(c, &(s->list[s->size]));
     
-    memcpy(&(s->list[s->size]), c, sizeof(city_tour));
+    //memcpy(&(s->list[s->size]), c, sizeof(city_tour));
     /*
     //hmm I need to store this
     s->list[s->size] = alloc_tour(); //Apparenlyt the other way was a problem. Oops
