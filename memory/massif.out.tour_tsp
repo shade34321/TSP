@@ -1,0 +1,632 @@
+desc: (none)
+cmd: bin/tour_tsp 15_city.txt 15
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=264512
+mem_heap_B=5548
+mem_heap_extra_B=44
+mem_stacks_B=0
+heap_tree=detailed
+n3: 5548 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4096 0x4E9E1D3: _IO_file_doallocate (filedoalloc.c:127)
+  n1: 4096 0x4EAC592: _IO_doallocbuf (genops.c:398)
+   n1: 4096 0x4EAB69A: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:556)
+    n1: 4096 0x4EAC60C: _IO_default_uflow (genops.c:413)
+     n1: 4096 0x4E8D25E: _IO_vfscanf (vfscanf.c:634)
+      n1: 4096 0x4E9C8E7: __isoc99_fscanf (isoc99_fscanf.c:34)
+       n1: 4096 0x400ADA: read_costs (tour_tsp.c:64)
+        n0: 4096 0x40099F: main (tour_tsp.c:23)
+ n0: 900 0x400965: main (tour_tsp.c:16)
+ n1: 552 0x4E9ECDB: __fopen_internal (iofopen.c:69)
+  n1: 552 0x400A72: read_costs (tour_tsp.c:54)
+   n0: 552 0x40099F: main (tour_tsp.c:23)
+#-----------
+snapshot=2
+#-----------
+time=3192207926
+mem_heap_B=115121634
+mem_heap_extra_B=28405334
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=5946781147
+mem_heap_B=218787042
+mem_heap_extra_B=53985110
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=7974207161
+mem_heap_B=296022200
+mem_heap_extra_B=73043136
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=10975391709
+mem_heap_B=410747272
+mem_heap_extra_B=101351920
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=14249418736
+mem_heap_B=533893295
+mem_heap_extra_B=131738601
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=16704943849
+mem_heap_B=628016478
+mem_heap_extra_B=154963802
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=19365112631
+mem_heap_B=731068966
+mem_heap_extra_B=180392338
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=21206767359
+mem_heap_B=801616735
+mem_heap_extra_B=197800225
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=23662307610
+mem_heap_B=895966006
+mem_heap_extra_B=221081218
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=26527107684
+mem_heap_B=1005183114
+mem_heap_extra_B=248030894
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=29391848216
+mem_heap_B=1115980416
+mem_heap_extra_B=275370488
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=32665825182
+mem_heap_B=1242465390
+mem_heap_extra_B=306581066
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=35121306005
+mem_heap_B=1337710309
+mem_heap_extra_B=330083059
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=37167538652
+mem_heap_B=1415465217
+mem_heap_extra_B=349269335
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1415465217 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 1121338173 0x40123F: alloc_tour (city_tour.c:11)
+  n1: 1121324326 0x40118E: pop (tour_list.c:70)
+   n1: 1121324326 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 1121324326 0x4009EF: main (tour_tsp.c:33)
+  n0: 13847 in 3 places, all below massif's threshold (1.00%)
+ n2: 294121504 0x401208: alloc_tour (city_tour.c:4)
+  n1: 294117872 0x40118E: pop (tour_list.c:70)
+   n1: 294117872 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 294117872 0x4009EF: main (tour_tsp.c:33)
+  n0: 3632 in 3 places, all below massif's threshold (1.00%)
+ n0: 5540 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=39213772377
+mem_heap_B=1493323767
+mem_heap_extra_B=368481185
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=42078503144
+mem_heap_B=1602558200
+mem_heap_extra_B=395435136
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=44124738116
+mem_heap_B=1681258052
+mem_heap_extra_B=414854580
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=47398711894
+mem_heap_B=1806100462
+mem_heap_extra_B=445659850
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=49035736693
+mem_heap_B=1869454445
+mem_heap_extra_B=461292651
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=51218433881
+mem_heap_B=1952603357
+mem_heap_extra_B=481809915
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=53401132636
+mem_heap_B=2037629606
+mem_heap_extra_B=502790418
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=55583835826
+mem_heap_B=2122481373
+mem_heap_extra_B=523727867
+mem_stacks_B=0
+heap_tree=detailed
+n3: 2122481373 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 1681441881 0x40123F: alloc_tour (city_tour.c:11)
+  n1: 1681428034 0x40118E: pop (tour_list.c:70)
+   n1: 1681428034 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 1681428034 0x4009EF: main (tour_tsp.c:33)
+  n0: 13847 in 3 places, all below massif's threshold (1.00%)
+ n2: 441033952 0x401208: alloc_tour (city_tour.c:4)
+  n1: 441030320 0x40118E: pop (tour_list.c:70)
+   n1: 441030320 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 441030320 0x4009EF: main (tour_tsp.c:33)
+  n0: 3632 in 3 places, all below massif's threshold (1.00%)
+ n0: 5540 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=57220861839
+mem_heap_B=2187180315
+mem_heap_extra_B=539692541
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=59403563040
+mem_heap_B=2273715610
+mem_heap_extra_B=561045406
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=62677614238
+mem_heap_B=2398803419
+mem_heap_extra_B=591911229
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=64314639462
+mem_heap_B=2460933718
+mem_heap_extra_B=607242082
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=66497339260
+mem_heap_B=2546256648
+mem_heap_extra_B=628295792
+mem_stacks_B=0
+heap_tree=detailed
+n3: 2546256648 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2017159956 0x40123F: alloc_tour (city_tour.c:11)
+  n1: 2017146109 0x40118E: pop (tour_list.c:70)
+   n1: 2017146109 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 2017146109 0x4009EF: main (tour_tsp.c:33)
+  n0: 13847 in 3 places, all below massif's threshold (1.00%)
+ n2: 529091152 0x401208: alloc_tour (city_tour.c:4)
+  n1: 529087520 0x40118E: pop (tour_list.c:70)
+   n1: 529087520 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 529087520 0x4009EF: main (tour_tsp.c:33)
+  n0: 3632 in 3 places, all below massif's threshold (1.00%)
+ n0: 5540 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=69225712756
+mem_heap_B=2655280563
+mem_heap_extra_B=655197797
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=70862737990
+mem_heap_B=2722568861
+mem_heap_extra_B=671801403
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=73591112673
+mem_heap_B=2830697574
+mem_heap_extra_B=698482514
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=76455858754
+mem_heap_B=2946506190
+mem_heap_extra_B=727058666
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=80002636699
+mem_heap_B=3092161469
+mem_heap_extra_B=762999579
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=83549416922
+mem_heap_B=3235536470
+mem_heap_extra_B=798377826
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=87096194339
+mem_heap_B=3380164877
+mem_heap_extra_B=834065355
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=88869584485
+mem_heap_B=3452903697
+mem_heap_extra_B=852013895
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=91529669602
+mem_heap_B=3559919683
+mem_heap_extra_B=878420437
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=95076449719
+mem_heap_B=3702818978
+mem_heap_extra_B=913681302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=96849841150
+mem_heap_B=3774670373
+mem_heap_extra_B=931410867
+mem_stacks_B=0
+heap_tree=detailed
+n3: 3774670373 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2990318881 0x40123F: alloc_tour (city_tour.c:11)
+  n1: 2990305034 0x40118E: pop (tour_list.c:70)
+   n1: 2990305034 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 2990305034 0x4009EF: main (tour_tsp.c:33)
+  n0: 13847 in 3 places, all below massif's threshold (1.00%)
+ n2: 784345952 0x401208: alloc_tour (city_tour.c:4)
+  n1: 784342320 0x40118E: pop (tour_list.c:70)
+   n1: 784342320 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 784342320 0x4009EF: main (tour_tsp.c:33)
+  n0: 3632 in 3 places, all below massif's threshold (1.00%)
+ n0: 5540 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=99509929129
+mem_heap_B=3882975108
+mem_heap_extra_B=958135412
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=101283319924
+mem_heap_B=3955271178
+mem_heap_extra_B=975974702
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=103943403917
+mem_heap_B=4063563593
+mem_heap_extra_B=1002696207
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=105716795127
+mem_heap_B=4135827862
+mem_heap_extra_B=1020527650
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4135827862 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3276430658 0x40123F: alloc_tour (city_tour.c:11)
+  n1: 3276416811 0x40118E: pop (tour_list.c:70)
+   n1: 3276416811 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 3276416811 0x4009EF: main (tour_tsp.c:33)
+  n0: 13847 in 3 places, all below massif's threshold (1.00%)
+ n2: 859391664 0x401208: alloc_tour (city_tour.c:4)
+  n1: 859388032 0x40118E: pop (tour_list.c:70)
+   n1: 859388032 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 859388032 0x4009EF: main (tour_tsp.c:33)
+  n0: 3632 in 3 places, all below massif's threshold (1.00%)
+ n0: 5540 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=108376880223
+mem_heap_B=4242748214
+mem_heap_extra_B=1046910594
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=110150269809
+mem_heap_B=4311558263
+mem_heap_extra_B=1063889697
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=112810356861
+mem_heap_B=4417508415
+mem_heap_extra_B=1090033241
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=114583749488
+mem_heap_B=4488392228
+mem_heap_extra_B=1107524052
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4488392228 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3555734896 0x40123F: alloc_tour (city_tour.c:11)
+  n1: 3555721049 0x40118E: pop (tour_list.c:70)
+   n1: 3555721049 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 3555721049 0x4009EF: main (tour_tsp.c:33)
+  n0: 13847 in 3 places, all below massif's threshold (1.00%)
+ n2: 932651792 0x401208: alloc_tour (city_tour.c:4)
+  n1: 932648160 0x40118E: pop (tour_list.c:70)
+   n1: 932648160 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 932648160 0x4009EF: main (tour_tsp.c:33)
+  n0: 3632 in 3 places, all below massif's threshold (1.00%)
+ n0: 5540 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=117243836041
+mem_heap_B=4595836411
+mem_heap_extra_B=1134036253
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=119017227243
+mem_heap_B=4668064413
+mem_heap_extra_B=1151858747
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=120654253077
+mem_heap_B=4735201098
+mem_heap_extra_B=1168424942
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=122291278125
+mem_heap_B=4798694374
+mem_heap_extra_B=1184092114
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=123928303947
+mem_heap_B=4862402557
+mem_heap_extra_B=1199812315
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=125565331664
+mem_heap_B=4928280600
+mem_heap_extra_B=1216067936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=127202357680
+mem_heap_B=4994316724
+mem_heap_extra_B=1232362564
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4994316724 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3956532224 0x40123F: alloc_tour (city_tour.c:11)
+  n1: 3956518377 0x40118E: pop (tour_list.c:70)
+   n1: 3956518377 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 3956518377 0x4009EF: main (tour_tsp.c:33)
+  n0: 13847 in 3 places, all below massif's threshold (1.00%)
+ n2: 1037778960 0x401208: alloc_tour (city_tour.c:4)
+  n1: 1037775328 0x40118E: pop (tour_list.c:70)
+   n1: 1037775328 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 1037775328 0x4009EF: main (tour_tsp.c:33)
+  n0: 3632 in 3 places, all below massif's threshold (1.00%)
+ n0: 5540 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=55
+#-----------
+time=128839383404
+mem_heap_B=5059715596
+mem_heap_extra_B=1248499948
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=130476408213
+mem_heap_B=5124630369
+mem_heap_extra_B=1264517879
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=132113435054
+mem_heap_B=5190425560
+mem_heap_extra_B=1280753056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=133750460555
+mem_heap_B=5256534988
+mem_heap_extra_B=1297065772
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=135387486236
+mem_heap_B=5320665208
+mem_heap_extra_B=1312890112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=137024512043
+mem_heap_B=5388535934
+mem_heap_extra_B=1329637434
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=138661538417
+mem_heap_B=5455135621
+mem_heap_extra_B=1346071123
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=140298564364
+mem_heap_B=5521579460
+mem_heap_extra_B=1362466356
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=141935590005
+mem_heap_B=5588249217
+mem_heap_extra_B=1378917335
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=142084893481
+mem_heap_B=5594490359
+mem_heap_extra_B=1380457353
+mem_stacks_B=0
+heap_tree=peak
+n3: 5594490359 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 4431994467 0x40123F: alloc_tour (city_tour.c:11)
+  n1: 4431980620 0x40118E: pop (tour_list.c:70)
+   n1: 4431980620 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 4431980620 0x4009EF: main (tour_tsp.c:33)
+  n0: 13847 in 3 places, all below massif's threshold (1.00%)
+ n2: 1162490352 0x401208: alloc_tour (city_tour.c:4)
+  n1: 1162486720 0x40118E: pop (tour_list.c:70)
+   n1: 1162486720 0x400E2E: iter_DFS (tour_tsp.c:136)
+    n0: 1162486720 0x4009EF: main (tour_tsp.c:33)
+  n0: 3632 in 3 places, all below massif's threshold (1.00%)
+ n0: 5540 in 5 places, all below massif's threshold (1.00%)

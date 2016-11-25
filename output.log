@@ -1,0 +1,182 @@
+0 0 1 3 8
+5 5 0 2 6
+1 1 18 0 10
+7 7 4 12 0
+Warning!
+Column 0 at row 1 [1] does not match column 1 at row 0 [5]
+Warning!
+Column 0 at row 2 [3] does not match column 2 at row 0 [1]
+Warning!
+Column 0 at row 3 [8] does not match column 3 at row 0 [7]
+Warning!
+Column 1 at row 0 [5] does not match column 0 at row 1 [1]
+Warning!
+Column 1 at row 2 [2] does not match column 2 at row 1 [18]
+Warning!
+Column 1 at row 3 [6] does not match column 3 at row 1 [4]
+Warning!
+Column 2 at row 0 [1] does not match column 0 at row 2 [3]
+Warning!
+Column 2 at row 1 [18] does not match column 1 at row 2 [2]
+Warning!
+Column 2 at row 3 [10] does not match column 3 at row 2 [12]
+Warning!
+Column 3 at row 0 [7] does not match column 0 at row 3 [8]
+Warning!
+Column 3 at row 1 [4] does not match column 1 at row 3 [6]
+Warning!
+Column 3 at row 2 [12] does not match column 2 at row 3 [10]
+0
+Cost: 0
+Cities in Tour: 1
+The stack before we process cities looks like...
+-1 -> 3 -> 2 -> 1
+Stack Size: 4
+Processing city 1
+Adding city 1 to the current tour
+0 -> 1
+Cost: 1
+Cities in Tour: 2
+Current stack looks like...
+-1 -> 3 -> 2 -> -1 -> 3 -> 2
+Stack Size: 6
+Processing city 2
+Adding city 2 to the current tour
+0 -> 1 -> 2
+Cost: 3
+Cities in Tour: 3
+Current stack looks like...
+-1 -> 3 -> 2 -> -1 -> 3 -> -1 -> 3
+Stack Size: 7
+Processing city 3
+Adding city 3 to the current tour
+0 -> 1 -> 2 -> 3
+Cost: 13
+Cities in Tour: 4
+We've reached the max amount of cities
+We have the best tour!
+0 -> 1 -> 2 -> 3 -> 0
+Cost: 20
+Cities in Tour: 5
+Removing last city from tour
+0 -> 1 -> 2
+Cost: 3
+Cities in Tour: 3
+Processing city -1
+Removing city -1 because it's a sentinel value.
+0 -> 1
+Cost: 1
+Cities in Tour: 2
+Processing city 3
+Adding city 3 to the current tour
+0 -> 1 -> 3
+Cost: 7
+Cities in Tour: 3
+Current stack looks like...
+-1 -> 3 -> 2 -> -1 -> -1 -> 2
+Stack Size: 6
+Processing city 2
+Adding city 2 to the current tour
+0 -> 1 -> 3 -> 2
+Cost: 19
+Cities in Tour: 4
+We've reached the max amount of cities
+We don't have the best tour!Removing last city from tour
+0 -> 1 -> 3
+Cost: 7
+Cities in Tour: 3
+Processing city -1
+Removing city -1 because it's a sentinel value.
+0 -> 1
+Cost: 1
+Cities in Tour: 2
+Processing city -1
+Removing city -1 because it's a sentinel value.
+0
+Cost: 0
+Cities in Tour: 1
+Processing city 2
+Adding city 2 to the current tour
+0 -> 2
+Cost: 3
+Cities in Tour: 2
+Current stack looks like...
+-1 -> 3 -> -1 -> 3 -> 1
+Stack Size: 5
+Processing city 1
+Current path doesn't look good. Moving on.
+Processing city 3
+Adding city 3 to the current tour
+0 -> 2 -> 3
+Cost: 13
+Cities in Tour: 3
+Current stack looks like...
+-1 -> 3 -> -1 -> -1 -> 1
+Stack Size: 5
+Processing city 1
+Adding city 1 to the current tour
+0 -> 2 -> 3 -> 1
+Cost: 17
+Cities in Tour: 4
+We've reached the max amount of cities
+We don't have the best tour!Removing last city from tour
+0 -> 2 -> 3
+Cost: 13
+Cities in Tour: 3
+Processing city -1
+Removing city -1 because it's a sentinel value.
+0 -> 2
+Cost: 3
+Cities in Tour: 2
+Processing city -1
+Removing city -1 because it's a sentinel value.
+0
+Cost: 0
+Cities in Tour: 1
+Processing city 3
+Adding city 3 to the current tour
+0 -> 3
+Cost: 8
+Cities in Tour: 2
+Current stack looks like...
+-1 -> -1 -> 2 -> 1
+Stack Size: 4
+Processing city 1
+Adding city 1 to the current tour
+0 -> 3 -> 1
+Cost: 12
+Cities in Tour: 3
+Current stack looks like...
+-1 -> -1 -> 2 -> -1 -> 2
+Stack Size: 5
+Processing city 2
+Adding city 2 to the current tour
+0 -> 3 -> 1 -> 2
+Cost: 14
+Cities in Tour: 4
+We've reached the max amount of cities
+We have the best tour!
+0 -> 3 -> 1 -> 2 -> 0
+Cost: 15
+Cities in Tour: 5
+Removing last city from tour
+0 -> 3 -> 1
+Cost: 12
+Cities in Tour: 3
+Processing city -1
+Removing city -1 because it's a sentinel value.
+0 -> 3
+Cost: 8
+Cities in Tour: 2
+Processing city 2
+Current path doesn't look good. Moving on.
+Processing city -1
+Removing city -1 because it's a sentinel value.
+0
+Cost: 0
+Cities in Tour: 1
+Processing city -1
+Removing city -1 because it's a sentinel value.
+
+Cost: 0
+Cities in Tour: 0

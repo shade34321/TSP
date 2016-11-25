@@ -1,0 +1,1272 @@
+desc: (none)
+cmd: mpiexec -n 12 bin/tsp_mpi book_15_city.txt
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1610013
+mem_heap_B=193306
+mem_heap_extra_B=11542
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2797715
+mem_heap_B=4410359
+mem_heap_extra_B=22585
+mem_stacks_B=0
+heap_tree=peak
+n3: 4410359 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4194336 0x511613E: opal_memory_linux_ptmalloc2_open (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 4194336 0x5115F30: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 4194336 0x50E3CA9: mca_base_framework_components_open (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 4194336 0x5115DD0: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 4194336 0x50ECF64: mca_base_framework_open (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 4194336 0x50CCC70: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+       n1: 4194336 0x403DD5: ??? (in /usr/bin/orterun)
+        n1: 4194336 0x403614: ??? (in /usr/bin/orterun)
+         n0: 4194336 0x558582E: (below main) (libc-start.c:291)
+ n3: 149856 0x50C7B3F: opal_hash_table_init2 (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 66272 0x50E77FC: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+      n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+       n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n1: 66272 0x50E9A94: mca_base_pvar_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50E7856: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+       n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+        n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n0: 17312 in 1 place, below massif's threshold (1.00%)
+ n0: 66167 in 40 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=4345760
+mem_heap_B=254415
+mem_heap_extra_B=30593
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=6074787
+mem_heap_B=298408
+mem_heap_extra_B=36520
+mem_stacks_B=0
+heap_tree=detailed
+n10: 298408 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 149856 0x50C7B3F: opal_hash_table_init2 (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 66272 0x50E77FC: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+      n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+       n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n1: 66272 0x50E9A94: mca_base_pvar_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50E7856: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+       n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+        n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n1: 17312 0x50EBC64: mca_base_var_group_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 17312 0x50E784B: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 17312 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 17312 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 17312 0x403DD5: ??? (in /usr/bin/orterun)
+       n1: 17312 0x403614: ??? (in /usr/bin/orterun)
+        n0: 17312 0x558582E: (below main) (libc-start.c:291)
+ n2: 33760 0x50E8137: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n0: 24320 in 120 places, all below massif's threshold (1.00%)
+  n1: 9440 0x50E8AFA: mca_base_component_var_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 9440 in 17 places, all below massif's threshold (1.00%)
+ n0: 29815 in 83 places, all below massif's threshold (1.00%)
+ n3: 29769 0x55EF8D8: strdup (strdup.c:42)
+  n1: 14812 0x50E81CC: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 14812 in 119 places, all below massif's threshold (1.00%)
+  n3: 9832 0x50ED4DA: opal_argv_append_nosize (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 5041 0x50E1981: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 5041 0x50FE5F0: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 5041 0x50E314B: mca_base_component_find (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 5041 0x50ECA5F: mca_base_framework_components_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+       n1: 5041 0x50ECEBE: mca_base_framework_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+        n1: 5041 0x50ECF10: mca_base_framework_open (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+         n1: 5041 0x50CCC07: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+          n1: 5041 0x403DD5: ??? (in /usr/bin/orterun)
+           n1: 5041 0x403614: ??? (in /usr/bin/orterun)
+            n0: 5041 0x558582E: (below main) (libc-start.c:291)
+   n2: 4772 0x50ED603: opal_argv_append (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n2: 4631 0x50EDBF5: opal_argv_copy (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 4602 0x40445D: ??? (in /usr/bin/orterun)
+      n1: 4602 0x403614: ??? (in /usr/bin/orterun)
+       n0: 4602 0x558582E: (below main) (libc-start.c:291)
+     n0: 29 in 2 places, all below massif's threshold (1.00%)
+    n0: 141 in 8 places, all below massif's threshold (1.00%)
+   n0: 19 in 2 places, all below massif's threshold (1.00%)
+  n0: 5125 in 29 places, all below massif's threshold (1.00%)
+ n1: 19110 0x400BA24: _dl_new_object (dl-object.c:75)
+  n1: 19110 0x400633B: _dl_map_object_from_fd (dl-load.c:1006)
+   n2: 19110 0x4008A55: _dl_map_object (dl-load.c:2476)
+    n1: 11820 0x400D9D0: openaux (dl-deps.c:63)
+     n1: 11820 0x4010392: _dl_catch_error (dl-error.c:187)
+      n1: 11820 0x400E010: _dl_map_object_deps (dl-deps.c:254)
+       n1: 11820 0x4015410: dl_open_worker (dl-open.c:280)
+        n1: 11820 0x4010392: _dl_catch_error (dl-error.c:187)
+         n1: 11820 0x4014BD7: _dl_open (dl-open.c:660)
+          n1: 11820 0x5B68F07: dlopen_doit (dlopen.c:66)
+           n1: 11820 0x4010392: _dl_catch_error (dl-error.c:187)
+            n1: 11820 0x5B6956F: _dlerror_run (dlerror.c:163)
+             n1: 11820 0x5B68F9F: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+              n1: 11820 0x63880A0: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+               n1: 11820 0x6384C56: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                n1: 11820 0x6386872: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                 n1: 11820 0x6387173: lt_dlopenadvise (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                  n1: 11820 0x638723E: lt_dlopenext (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                   n1: 11820 0x593E989: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                    n1: 11820 0x6385819: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                     n1: 11820 0x6385223: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                      n1: 11820 0x6385DB7: lt_dlforeachfile (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                       n1: 11820 0x593F1B5: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                        n1: 11820 0x59389C5: hwloc_topology_init (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                         n1: 11820 0x51123B4: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                          n1: 11820 0x719C827: ???
+                           n1: 11820 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+                            n1: 11820 0x404491: ??? (in /usr/bin/orterun)
+                             n1: 11820 0x403614: ??? (in /usr/bin/orterun)
+                              n0: 11820 0x558582E: (below main) (libc-start.c:291)
+    n1: 7290 0x40153A5: dl_open_worker (dl-open.c:237)
+     n1: 7290 0x4010392: _dl_catch_error (dl-error.c:187)
+      n1: 7290 0x4014BD7: _dl_open (dl-open.c:660)
+       n1: 7290 0x5B68F07: dlopen_doit (dlopen.c:66)
+        n1: 7290 0x4010392: _dl_catch_error (dl-error.c:187)
+         n1: 7290 0x5B6956F: _dlerror_run (dlerror.c:163)
+          n2: 7290 0x5B68F9F: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 3649 0x63880A0: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+            n1: 3649 0x6384C56: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+             n1: 3649 0x6386872: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+              n1: 3649 0x6387173: lt_dlopenadvise (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+               n1: 3649 0x638723E: lt_dlopenext (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                n1: 3649 0x593E989: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                 n1: 3649 0x6385819: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                  n1: 3649 0x6385223: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                   n1: 3649 0x6385DB7: lt_dlforeachfile (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                    n1: 3649 0x593F1B5: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                     n1: 3649 0x59389C5: hwloc_topology_init (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                      n1: 3649 0x51123B4: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                       n1: 3649 0x719C827: ???
+                        n1: 3649 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+                         n1: 3649 0x404491: ??? (in /usr/bin/orterun)
+                          n1: 3649 0x403614: ??? (in /usr/bin/orterun)
+                           n0: 3649 0x558582E: (below main) (libc-start.c:291)
+           n1: 3641 0x50FE892: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+            n1: 3641 0x50E1BF2: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+             n1: 3641 0x50E305D: mca_base_component_find (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+              n1: 3641 0x50ECA5F: mca_base_framework_components_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+               n1: 3641 0x50ECEBE: mca_base_framework_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                n1: 3641 0x50ECF10: mca_base_framework_open (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                 n0: 3641 in 3 places, all below massif's threshold (1.00%)
+ n2: 11832 0x50EBF27: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n2: 8120 0x50E80EB: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 4640 in 8 places, all below massif's threshold (1.00%)
+   n1: 3480 0x50E8AFA: mca_base_component_var_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n0: 3480 in 8 places, all below massif's threshold (1.00%)
+  n0: 3712 in 3 places, all below massif's threshold (1.00%)
+ n3: 9848 0x50E67DB: mca_base_var_generate_full_name4 (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 4688 0x50E81FE: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 4688 in 121 places, all below massif's threshold (1.00%)
+  n1: 4688 0x50E8852: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 4688 in 121 places, all below massif's threshold (1.00%)
+  n0: 472 in 5 places, all below massif's threshold (1.00%)
+ n1: 5424 0x4011EEC: _dl_check_map_versions (dl-version.c:293)
+  n1: 5424 0x4015947: dl_open_worker (dl-open.c:286)
+   n1: 5424 0x4010392: _dl_catch_error (dl-error.c:187)
+    n1: 5424 0x4014BD7: _dl_open (dl-open.c:660)
+     n1: 5424 0x5B68F07: dlopen_doit (dlopen.c:66)
+      n1: 5424 0x4010392: _dl_catch_error (dl-error.c:187)
+       n1: 5424 0x5B6956F: _dlerror_run (dlerror.c:163)
+        n2: 5424 0x5B68F9F: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+         n1: 5040 0x63880A0: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+          n1: 5040 0x6384C56: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+           n1: 5040 0x6386872: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+            n1: 5040 0x6387173: lt_dlopenadvise (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+             n1: 5040 0x638723E: lt_dlopenext (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+              n1: 5040 0x593E989: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+               n1: 5040 0x6385819: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                n1: 5040 0x6385223: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                 n1: 5040 0x6385DB7: lt_dlforeachfile (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                  n1: 5040 0x593F1B5: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                   n1: 5040 0x59389C5: hwloc_topology_init (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                    n1: 5040 0x51123B4: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                     n1: 5040 0x719C827: ???
+                      n1: 5040 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+                       n1: 5040 0x404491: ??? (in /usr/bin/orterun)
+                        n1: 5040 0x403614: ??? (in /usr/bin/orterun)
+                         n0: 5040 0x558582E: (below main) (libc-start.c:291)
+         n0: 384 in 1 place, below massif's threshold (1.00%)
+ n2: 4898 0x50C80B2: opal_hash_table_set_value_ptr (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 4477 0x50E8938: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 4477 in 121 places, all below massif's threshold (1.00%)
+  n0: 421 in 1 place, below massif's threshold (1.00%)
+ n1: 4096 0x50E7D2C: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 4096 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 4096 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 4096 0x403DD5: ??? (in /usr/bin/orterun)
+     n1: 4096 0x403614: ??? (in /usr/bin/orterun)
+      n0: 4096 0x558582E: (below main) (libc-start.c:291)
+#-----------
+snapshot=5
+#-----------
+time=9502738
+mem_heap_B=301480
+mem_heap_extra_B=36520
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=10525525
+mem_heap_B=372232
+mem_heap_extra_B=36520
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=12117168
+mem_heap_B=409572
+mem_heap_extra_B=44188
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=19218211
+mem_heap_B=441518
+mem_heap_extra_B=44218
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=26268850
+mem_heap_B=441714
+mem_heap_extra_B=44278
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=27657921
+mem_heap_B=562699
+mem_heap_extra_B=67741
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=28605249
+mem_heap_B=641396
+mem_heap_extra_B=84548
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=30413816
+mem_heap_B=792254
+mem_heap_extra_B=116866
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=32355983
+mem_heap_B=873450
+mem_heap_extra_B=139638
+mem_stacks_B=0
+heap_tree=detailed
+n8: 873450 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 251520 0x77B1C94: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+  n1: 251520 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 251520 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 251520 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+     n1: 251520 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+      n1: 251520 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+       n1: 251520 0x719C827: ???
+        n1: 251520 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+         n1: 251520 0x404491: ??? (in /usr/bin/orterun)
+          n1: 251520 0x403614: ??? (in /usr/bin/orterun)
+           n0: 251520 0x558582E: (below main) (libc-start.c:291)
+ n4: 240846 0x55EF8D8: strdup (strdup.c:42)
+  n1: 137482 0x77B1E19: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 137482 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 137482 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+     n1: 137482 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+      n1: 137482 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+       n1: 137482 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+        n1: 137482 0x719C827: ???
+         n1: 137482 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+          n1: 137482 0x404491: ??? (in /usr/bin/orterun)
+           n1: 137482 0x403614: ??? (in /usr/bin/orterun)
+            n0: 137482 0x558582E: (below main) (libc-start.c:291)
+  n1: 72126 0x77B1D28: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 72126 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 72126 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+     n1: 72126 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+      n1: 72126 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+       n1: 72126 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+        n1: 72126 0x719C827: ???
+         n1: 72126 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+          n1: 72126 0x404491: ??? (in /usr/bin/orterun)
+           n1: 72126 0x403614: ??? (in /usr/bin/orterun)
+            n0: 72126 0x558582E: (below main) (libc-start.c:291)
+  n0: 16426 in 35 places, all below massif's threshold (1.00%)
+  n1: 14812 0x50E81CC: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 14812 in 119 places, all below massif's threshold (1.00%)
+ n3: 149856 0x50C7B3F: opal_hash_table_init2 (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 66272 0x50E77FC: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+      n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+       n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n1: 66272 0x50E9A94: mca_base_pvar_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50E7856: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+       n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+        n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n1: 17312 0x50EBC64: mca_base_var_group_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 17312 0x50E784B: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 17312 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 17312 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 17312 0x403DD5: ??? (in /usr/bin/orterun)
+       n1: 17312 0x403614: ??? (in /usr/bin/orterun)
+        n0: 17312 0x558582E: (below main) (libc-start.c:291)
+ n0: 93822 in 141 places, all below massif's threshold (1.00%)
+ n1: 72704 0xA58FEFE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 72704 0x40104E8: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40105F9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4015710: dl_open_worker (dl-open.c:575)
+     n1: 72704 0x4010392: _dl_catch_error (dl-error.c:187)
+      n1: 72704 0x4014BD7: _dl_open (dl-open.c:660)
+       n1: 72704 0x5B68F07: dlopen_doit (dlopen.c:66)
+        n1: 72704 0x4010392: _dl_catch_error (dl-error.c:187)
+         n1: 72704 0x5B6956F: _dlerror_run (dlerror.c:163)
+          n1: 72704 0x5B68F9F: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 72704 0x63880A0: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+            n1: 72704 0x6384C56: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+             n1: 72704 0x6386872: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+              n1: 72704 0x6387173: lt_dlopenadvise (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+               n1: 72704 0x638723E: lt_dlopenext (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                n1: 72704 0x593E989: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                 n1: 72704 0x6385819: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                  n1: 72704 0x6385223: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                   n1: 72704 0x6385DB7: lt_dlforeachfile (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                    n1: 72704 0x593F1B5: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                     n1: 72704 0x59389C5: hwloc_topology_init (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                      n1: 72704 0x51123B4: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                       n1: 72704 0x719C827: ???
+                        n1: 72704 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+                         n1: 72704 0x404491: ??? (in /usr/bin/orterun)
+                          n1: 72704 0x403614: ??? (in /usr/bin/orterun)
+                           n0: 72704 0x558582E: (below main) (libc-start.c:291)
+ n1: 33760 0x50E8137: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n0: 33760 in 121 places, all below massif's threshold (1.00%)
+ n1: 19110 0x400BA24: _dl_new_object (dl-object.c:75)
+  n1: 19110 0x400633B: _dl_map_object_from_fd (dl-load.c:1006)
+   n2: 19110 0x4008A55: _dl_map_object (dl-load.c:2476)
+    n1: 11820 0x400D9D0: openaux (dl-deps.c:63)
+     n1: 11820 0x4010392: _dl_catch_error (dl-error.c:187)
+      n1: 11820 0x400E010: _dl_map_object_deps (dl-deps.c:254)
+       n1: 11820 0x4015410: dl_open_worker (dl-open.c:280)
+        n1: 11820 0x4010392: _dl_catch_error (dl-error.c:187)
+         n1: 11820 0x4014BD7: _dl_open (dl-open.c:660)
+          n1: 11820 0x5B68F07: dlopen_doit (dlopen.c:66)
+           n1: 11820 0x4010392: _dl_catch_error (dl-error.c:187)
+            n1: 11820 0x5B6956F: _dlerror_run (dlerror.c:163)
+             n1: 11820 0x5B68F9F: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+              n1: 11820 0x63880A0: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+               n1: 11820 0x6384C56: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                n1: 11820 0x6386872: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                 n1: 11820 0x6387173: lt_dlopenadvise (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                  n1: 11820 0x638723E: lt_dlopenext (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                   n1: 11820 0x593E989: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                    n1: 11820 0x6385819: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                     n1: 11820 0x6385223: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                      n1: 11820 0x6385DB7: lt_dlforeachfile (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                       n1: 11820 0x593F1B5: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                        n1: 11820 0x59389C5: hwloc_topology_init (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                         n1: 11820 0x51123B4: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                          n1: 11820 0x719C827: ???
+                           n1: 11820 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+                            n1: 11820 0x404491: ??? (in /usr/bin/orterun)
+                             n1: 11820 0x403614: ??? (in /usr/bin/orterun)
+                              n0: 11820 0x558582E: (below main) (libc-start.c:291)
+    n0: 7290 in 1 place, below massif's threshold (1.00%)
+ n1: 11832 0x50EBF27: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n0: 11832 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=33491173
+mem_heap_B=879200
+mem_heap_extra_B=140896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=36116614
+mem_heap_B=912219
+mem_heap_extra_B=141165
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=38697680
+mem_heap_B=912416
+mem_heap_extra_B=141224
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=40664048
+mem_heap_B=1063043
+mem_heap_extra_B=178125
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=46920580
+mem_heap_B=1063137
+mem_heap_extra_B=179879
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=52450266
+mem_heap_B=1071623
+mem_heap_extra_B=180153
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=57860361
+mem_heap_B=1071828
+mem_heap_extra_B=180204
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=62057008
+mem_heap_B=1065941
+mem_heap_extra_B=180515
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=65558928
+mem_heap_B=1073880
+mem_heap_extra_B=180648
+mem_stacks_B=0
+heap_tree=detailed
+n8: 1073880 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 357080 0x77B1C94: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+  n1: 357080 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 357080 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 357080 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+     n1: 357080 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+      n1: 357080 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+       n1: 357080 0x719C827: ???
+        n1: 357080 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+         n1: 357080 0x404491: ??? (in /usr/bin/orterun)
+          n1: 357080 0x403614: ??? (in /usr/bin/orterun)
+           n0: 357080 0x558582E: (below main) (libc-start.c:291)
+ n4: 296300 0x55EF8D8: strdup (strdup.c:42)
+  n1: 167881 0x77B1E19: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 167881 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 167881 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+     n1: 167881 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+      n1: 167881 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+       n1: 167881 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+        n1: 167881 0x719C827: ???
+         n1: 167881 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+          n1: 167881 0x404491: ??? (in /usr/bin/orterun)
+           n1: 167881 0x403614: ??? (in /usr/bin/orterun)
+            n0: 167881 0x558582E: (below main) (libc-start.c:291)
+  n1: 95385 0x77B1D28: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 95385 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 95385 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+     n1: 95385 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+      n1: 95385 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+       n1: 95385 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+        n1: 95385 0x719C827: ???
+         n1: 95385 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+          n1: 95385 0x404491: ??? (in /usr/bin/orterun)
+           n1: 95385 0x403614: ??? (in /usr/bin/orterun)
+            n0: 95385 0x558582E: (below main) (libc-start.c:291)
+  n0: 18222 in 35 places, all below massif's threshold (1.00%)
+  n1: 14812 0x50E81CC: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 14812 in 119 places, all below massif's threshold (1.00%)
+ n3: 149856 0x50C7B3F: opal_hash_table_init2 (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 66272 0x50E77FC: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+      n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+       n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n1: 66272 0x50E9A94: mca_base_pvar_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50E7856: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+       n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+        n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n1: 17312 0x50EBC64: mca_base_var_group_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 17312 0x50E784B: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 17312 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 17312 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 17312 0x403DD5: ??? (in /usr/bin/orterun)
+       n1: 17312 0x403614: ??? (in /usr/bin/orterun)
+        n0: 17312 0x558582E: (below main) (libc-start.c:291)
+ n0: 128686 in 141 places, all below massif's threshold (1.00%)
+ n1: 72704 0xA58FEFE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 72704 0x40104E8: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40105F9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4015710: dl_open_worker (dl-open.c:575)
+     n1: 72704 0x4010392: _dl_catch_error (dl-error.c:187)
+      n1: 72704 0x4014BD7: _dl_open (dl-open.c:660)
+       n1: 72704 0x5B68F07: dlopen_doit (dlopen.c:66)
+        n1: 72704 0x4010392: _dl_catch_error (dl-error.c:187)
+         n1: 72704 0x5B6956F: _dlerror_run (dlerror.c:163)
+          n1: 72704 0x5B68F9F: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 72704 0x63880A0: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+            n1: 72704 0x6384C56: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+             n1: 72704 0x6386872: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+              n1: 72704 0x6387173: lt_dlopenadvise (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+               n1: 72704 0x638723E: lt_dlopenext (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                n1: 72704 0x593E989: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                 n1: 72704 0x6385819: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                  n1: 72704 0x6385223: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                   n1: 72704 0x6385DB7: lt_dlforeachfile (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                    n1: 72704 0x593F1B5: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                     n1: 72704 0x59389C5: hwloc_topology_init (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                      n1: 72704 0x51123B4: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                       n1: 72704 0x719C827: ???
+                        n1: 72704 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+                         n1: 72704 0x404491: ??? (in /usr/bin/orterun)
+                          n1: 72704 0x403614: ??? (in /usr/bin/orterun)
+                           n0: 72704 0x558582E: (below main) (libc-start.c:291)
+ n1: 33760 0x50E8137: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n0: 33760 in 121 places, all below massif's threshold (1.00%)
+ n1: 19110 0x400BA24: _dl_new_object (dl-object.c:75)
+  n1: 19110 0x400633B: _dl_map_object_from_fd (dl-load.c:1006)
+   n1: 19110 0x4008A55: _dl_map_object (dl-load.c:2476)
+    n0: 19110 in 2 places, all below massif's threshold (1.00%)
+ n1: 16384 0x79C8819: ??? (in /lib/x86_64-linux-gnu/libz.so.1.2.8)
+  n1: 16384 0x79C948E: gzgets (in /lib/x86_64-linux-gnu/libz.so.1.2.8)
+   n2: 16384 0x77B1B76: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 16384 0x77B1F5D: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+     n1: 16384 0x75AB5A8: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+      n1: 16384 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+       n1: 16384 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+        n1: 16384 0x719C827: ???
+         n1: 16384 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+          n1: 16384 0x404491: ??? (in /usr/bin/orterun)
+           n1: 16384 0x403614: ??? (in /usr/bin/orterun)
+            n0: 16384 0x558582E: (below main) (libc-start.c:291)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=69042777
+mem_heap_B=1074090
+mem_heap_extra_B=180694
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=69165599
+mem_heap_B=1083183
+mem_heap_extra_B=182769
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=75236507
+mem_heap_B=1077166
+mem_heap_extra_B=183018
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=77479918
+mem_heap_B=1212607
+mem_heap_extra_B=183193
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=79032585
+mem_heap_B=1219442
+mem_heap_extra_B=184414
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=80468424
+mem_heap_B=1240969
+mem_heap_extra_B=189175
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=82400445
+mem_heap_B=1317558
+mem_heap_extra_B=203922
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=84031486
+mem_heap_B=1369217
+mem_heap_extra_B=216607
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=85315422
+mem_heap_B=1406469
+mem_heap_extra_B=225411
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=87189324
+mem_heap_B=1444757
+mem_heap_extra_B=230643
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=88396857
+mem_heap_B=1455965
+mem_heap_extra_B=232723
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=89439250
+mem_heap_B=1467202
+mem_heap_extra_B=233846
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=90851447
+mem_heap_B=1548898
+mem_heap_extra_B=253158
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=92194294
+mem_heap_B=1577908
+mem_heap_extra_B=257644
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=93637612
+mem_heap_B=1611830
+mem_heap_extra_B=258258
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=95800721
+mem_heap_B=1589265
+mem_heap_extra_B=251863
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=97786699
+mem_heap_B=1554234
+mem_heap_extra_B=238126
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=99026557
+mem_heap_B=1565656
+mem_heap_extra_B=238192
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=100266494
+mem_heap_B=1577193
+mem_heap_extra_B=238191
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=101506555
+mem_heap_B=1588735
+mem_heap_extra_B=238257
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=102746708
+mem_heap_B=1600181
+mem_heap_extra_B=238299
+mem_stacks_B=0
+heap_tree=detailed
+n11: 1600181 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 363400 0x77B1C94: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+  n1: 363400 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 363400 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 363400 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+     n1: 363400 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+      n1: 363400 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+       n1: 363400 0x719C827: ???
+        n1: 363400 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+         n1: 363400 0x404491: ??? (in /usr/bin/orterun)
+          n1: 363400 0x403614: ??? (in /usr/bin/orterun)
+           n0: 363400 0x558582E: (below main) (libc-start.c:291)
+ n4: 320166 0x55EF8D8: strdup (strdup.c:42)
+  n1: 169358 0x77B1E19: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 169358 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 169358 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+     n1: 169358 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+      n1: 169358 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+       n1: 169358 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+        n1: 169358 0x719C827: ???
+         n1: 169358 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+          n1: 169358 0x404491: ??? (in /usr/bin/orterun)
+           n1: 169358 0x403614: ??? (in /usr/bin/orterun)
+            n0: 169358 0x558582E: (below main) (libc-start.c:291)
+  n1: 97856 0x77B1D28: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 97856 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 97856 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+     n1: 97856 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+      n1: 97856 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+       n1: 97856 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+        n1: 97856 0x719C827: ???
+         n1: 97856 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+          n1: 97856 0x404491: ??? (in /usr/bin/orterun)
+           n1: 97856 0x403614: ??? (in /usr/bin/orterun)
+            n0: 97856 0x558582E: (below main) (libc-start.c:291)
+  n0: 27390 in 73 places, all below massif's threshold (1.00%)
+  n1: 25562 0x50E81CC: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 25562 in 147 places, all below massif's threshold (1.00%)
+ n0: 230142 in 345 places, all below massif's threshold (1.00%)
+ n3: 178752 0x50C7B3F: opal_hash_table_init2 (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 66272 0x50E77FC: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+      n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+       n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n1: 66272 0x50E9A94: mca_base_pvar_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50E7856: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+       n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+        n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n0: 46208 in 5 places, all below massif's threshold (1.00%)
+ n1: 131072 0xACD6EA8: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+  n1: 131072 0xACD6FB8: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+   n1: 131072 0xAC544EE: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+    n1: 131072 0xAB534BB: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+     n1: 131072 0xAB53456: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+      n1: 131072 0x73A3D2E: ??? (in /usr/lib/x86_64-linux-gnu/libOpenCL.so.1.0.0)
+       n1: 131072 0x73A4231: clGetPlatformIDs (in /usr/lib/x86_64-linux-gnu/libOpenCL.so.1.0.0)
+        n1: 131072 0x6D932F3: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_opencl.so)
+         n1: 131072 0x594000F: hwloc_backends_notify_new_object (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+          n1: 131072 0x59441FA: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+           n1: 131072 0x59442B7: hwloc_insert_pci_device_list (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+            n1: 131072 0x75AB9A3: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+             n1: 131072 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+              n1: 131072 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+               n1: 131072 0x719C827: ???
+                n1: 131072 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+                 n1: 131072 0x404491: ??? (in /usr/bin/orterun)
+                  n1: 131072 0x403614: ??? (in /usr/bin/orterun)
+                   n0: 131072 0x558582E: (below main) (libc-start.c:291)
+ n2: 115712 0x50D0A18: opal_dss_buffer_extend (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n2: 114688 0x50D1B63: opal_dss_pack_byte (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 114688 0x50D204A: opal_dss_pack_byte_object (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n2: 114688 0x50D1CBC: opal_dss_pack (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 112640 0x4E7326B: orte_odls_base_default_require_sync (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+      n1: 112640 0x4E631E1: orte_daemon_recv (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+       n1: 112640 0x4E871EF: orte_rml_base_process_msg (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+        n1: 112640 0x5102D17: opal_libevent2021_event_base_loop (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+         n1: 112640 0x404F1C: ??? (in /usr/bin/orterun)
+          n1: 112640 0x403614: ??? (in /usr/bin/orterun)
+           n0: 112640 0x558582E: (below main) (libc-start.c:291)
+     n0: 2048 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 1024 in 2 places, all below massif's threshold (1.00%)
+ n2: 80000 0x50E8137: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 43040 0x50E8AFA: mca_base_component_var_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 43040 in 83 places, all below massif's threshold (1.00%)
+  n0: 36960 in 148 places, all below massif's threshold (1.00%)
+ n1: 72704 0xA58FEFE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 72704 0x40104E8: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40105F9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4015710: dl_open_worker (dl-open.c:575)
+     n1: 72704 0x4010392: _dl_catch_error (dl-error.c:187)
+      n1: 72704 0x4014BD7: _dl_open (dl-open.c:660)
+       n1: 72704 0x5B68F07: dlopen_doit (dlopen.c:66)
+        n1: 72704 0x4010392: _dl_catch_error (dl-error.c:187)
+         n1: 72704 0x5B6956F: _dlerror_run (dlerror.c:163)
+          n1: 72704 0x5B68F9F: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 72704 0x63880A0: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+            n1: 72704 0x6384C56: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+             n1: 72704 0x6386872: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+              n1: 72704 0x6387173: lt_dlopenadvise (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+               n1: 72704 0x638723E: lt_dlopenext (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                n1: 72704 0x593E989: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                 n1: 72704 0x6385819: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                  n1: 72704 0x6385223: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                   n1: 72704 0x6385DB7: lt_dlforeachfile (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                    n1: 72704 0x593F1B5: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                     n1: 72704 0x59389C5: hwloc_topology_init (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                      n1: 72704 0x51123B4: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                       n1: 72704 0x719C827: ???
+                        n1: 72704 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+                         n1: 72704 0x404491: ??? (in /usr/bin/orterun)
+                          n1: 72704 0x403614: ??? (in /usr/bin/orterun)
+                           n0: 72704 0x558582E: (below main) (libc-start.c:291)
+ n1: 52954 0x400BA24: _dl_new_object (dl-object.c:75)
+  n1: 52954 0x400633B: _dl_map_object_from_fd (dl-load.c:1006)
+   n2: 52954 0x4008A55: _dl_map_object (dl-load.c:2476)
+    n1: 37564 0x40153A5: dl_open_worker (dl-open.c:237)
+     n1: 37564 0x4010392: _dl_catch_error (dl-error.c:187)
+      n2: 37564 0x4014BD7: _dl_open (dl-open.c:660)
+       n1: 35193 0x5B68F07: dlopen_doit (dlopen.c:66)
+        n1: 35193 0x4010392: _dl_catch_error (dl-error.c:187)
+         n1: 35193 0x5B6956F: _dlerror_run (dlerror.c:163)
+          n2: 35193 0x5B68F9F: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 29173 0x50FE892: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+            n1: 29173 0x50E1BF2: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+             n1: 29173 0x50E305D: mca_base_component_find (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+              n1: 29173 0x50ECA5F: mca_base_framework_components_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+               n1: 29173 0x50ECEBE: mca_base_framework_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                n1: 29173 0x50ECF10: mca_base_framework_open (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                 n0: 29173 in 18 places, all below massif's threshold (1.00%)
+           n0: 6020 in 3 places, all below massif's threshold (1.00%)
+       n0: 2371 in 1 place, below massif's threshold (1.00%)
+    n0: 15390 in 1 place, below massif's threshold (1.00%)
+ n2: 30856 0x50EBF27: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 23432 0x50E80EB: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 23432 in 10 places, all below massif's threshold (1.00%)
+  n0: 7424 in 3 places, all below massif's threshold (1.00%)
+ n1: 24423 0x50E67DB: mca_base_var_generate_full_name4 (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n0: 24423 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=104790370
+mem_heap_B=1476947
+mem_heap_extra_B=236141
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=106443291
+mem_heap_B=1470594
+mem_heap_extra_B=234838
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=107753818
+mem_heap_B=1469126
+mem_heap_extra_B=235194
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=109640503
+mem_heap_B=1481650
+mem_heap_extra_B=235598
+mem_stacks_B=0
+heap_tree=detailed
+n10: 1481650 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 363400 0x77B1C94: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+  n1: 363400 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 363400 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 363400 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+     n1: 363400 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+      n1: 363400 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+       n1: 363400 0x719C827: ???
+        n1: 363400 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+         n1: 363400 0x404491: ??? (in /usr/bin/orterun)
+          n1: 363400 0x403614: ??? (in /usr/bin/orterun)
+           n0: 363400 0x558582E: (below main) (libc-start.c:291)
+ n4: 320250 0x55EF8D8: strdup (strdup.c:42)
+  n1: 169358 0x77B1E19: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 169358 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 169358 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+     n1: 169358 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+      n1: 169358 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+       n1: 169358 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+        n1: 169358 0x719C827: ???
+         n1: 169358 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+          n1: 169358 0x404491: ??? (in /usr/bin/orterun)
+           n1: 169358 0x403614: ??? (in /usr/bin/orterun)
+            n0: 169358 0x558582E: (below main) (libc-start.c:291)
+  n1: 97856 0x77B1D28: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 97856 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 97856 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+     n1: 97856 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+      n1: 97856 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+       n1: 97856 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+        n1: 97856 0x719C827: ???
+         n1: 97856 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+          n1: 97856 0x404491: ??? (in /usr/bin/orterun)
+           n1: 97856 0x403614: ??? (in /usr/bin/orterun)
+            n0: 97856 0x558582E: (below main) (libc-start.c:291)
+  n0: 27474 in 74 places, all below massif's threshold (1.00%)
+  n1: 25562 0x50E81CC: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 25562 in 147 places, all below massif's threshold (1.00%)
+ n0: 227239 in 358 places, all below massif's threshold (1.00%)
+ n5: 178752 0x50C7B3F: opal_hash_table_init2 (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 66272 0x50E77FC: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+      n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+       n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n1: 66272 0x50E9A94: mca_base_pvar_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50E7856: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+       n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+        n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n1: 17312 0x50EBC64: mca_base_var_group_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 17312 0x50E784B: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 17312 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 17312 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 17312 0x403DD5: ??? (in /usr/bin/orterun)
+       n1: 17312 0x403614: ??? (in /usr/bin/orterun)
+        n0: 17312 0x558582E: (below main) (libc-start.c:291)
+  n1: 17312 0xC3154B4: ???
+   n1: 17312 0x50FD912: opal_db_base_select (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 17312 0x719C134: ???
+     n1: 17312 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+      n1: 17312 0x404491: ??? (in /usr/bin/orterun)
+       n1: 17312 0x403614: ??? (in /usr/bin/orterun)
+        n0: 17312 0x558582E: (below main) (libc-start.c:291)
+  n0: 11584 in 3 places, all below massif's threshold (1.00%)
+ n1: 131072 0xACD6EA8: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+  n1: 131072 0xACD6FB8: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+   n1: 131072 0xAC544EE: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+    n1: 131072 0xAB534BB: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+     n1: 131072 0xAB53456: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+      n1: 131072 0x73A3D2E: ??? (in /usr/lib/x86_64-linux-gnu/libOpenCL.so.1.0.0)
+       n1: 131072 0x73A4231: clGetPlatformIDs (in /usr/lib/x86_64-linux-gnu/libOpenCL.so.1.0.0)
+        n1: 131072 0x6D932F3: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_opencl.so)
+         n1: 131072 0x594000F: hwloc_backends_notify_new_object (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+          n1: 131072 0x59441FA: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+           n1: 131072 0x59442B7: hwloc_insert_pci_device_list (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+            n1: 131072 0x75AB9A3: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+             n1: 131072 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+              n1: 131072 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+               n1: 131072 0x719C827: ???
+                n1: 131072 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+                 n1: 131072 0x404491: ??? (in /usr/bin/orterun)
+                  n1: 131072 0x403614: ??? (in /usr/bin/orterun)
+                   n0: 131072 0x558582E: (below main) (libc-start.c:291)
+ n2: 80000 0x50E8137: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 43040 0x50E8AFA: mca_base_component_var_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 43040 in 83 places, all below massif's threshold (1.00%)
+  n0: 36960 in 148 places, all below massif's threshold (1.00%)
+ n1: 72704 0xA58FEFE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 72704 0x40104E8: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40105F9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4015710: dl_open_worker (dl-open.c:575)
+     n1: 72704 0x4010392: _dl_catch_error (dl-error.c:187)
+      n1: 72704 0x4014BD7: _dl_open (dl-open.c:660)
+       n1: 72704 0x5B68F07: dlopen_doit (dlopen.c:66)
+        n1: 72704 0x4010392: _dl_catch_error (dl-error.c:187)
+         n1: 72704 0x5B6956F: _dlerror_run (dlerror.c:163)
+          n1: 72704 0x5B68F9F: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 72704 0x63880A0: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+            n1: 72704 0x6384C56: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+             n1: 72704 0x6386872: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+              n1: 72704 0x6387173: lt_dlopenadvise (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+               n1: 72704 0x638723E: lt_dlopenext (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                n1: 72704 0x593E989: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                 n1: 72704 0x6385819: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                  n1: 72704 0x6385223: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                   n1: 72704 0x6385DB7: lt_dlforeachfile (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                    n1: 72704 0x593F1B5: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                     n1: 72704 0x59389C5: hwloc_topology_init (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                      n1: 72704 0x51123B4: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                       n1: 72704 0x719C827: ???
+                        n1: 72704 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+                         n1: 72704 0x404491: ??? (in /usr/bin/orterun)
+                          n1: 72704 0x403614: ??? (in /usr/bin/orterun)
+                           n0: 72704 0x558582E: (below main) (libc-start.c:291)
+ n1: 52954 0x400BA24: _dl_new_object (dl-object.c:75)
+  n1: 52954 0x400633B: _dl_map_object_from_fd (dl-load.c:1006)
+   n2: 52954 0x4008A55: _dl_map_object (dl-load.c:2476)
+    n1: 37564 0x40153A5: dl_open_worker (dl-open.c:237)
+     n1: 37564 0x4010392: _dl_catch_error (dl-error.c:187)
+      n2: 37564 0x4014BD7: _dl_open (dl-open.c:660)
+       n1: 35193 0x5B68F07: dlopen_doit (dlopen.c:66)
+        n1: 35193 0x4010392: _dl_catch_error (dl-error.c:187)
+         n1: 35193 0x5B6956F: _dlerror_run (dlerror.c:163)
+          n2: 35193 0x5B68F9F: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 29173 0x50FE892: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+            n1: 29173 0x50E1BF2: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+             n1: 29173 0x50E305D: mca_base_component_find (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+              n1: 29173 0x50ECA5F: mca_base_framework_components_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+               n1: 29173 0x50ECEBE: mca_base_framework_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                n1: 29173 0x50ECF10: mca_base_framework_open (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                 n0: 29173 in 18 places, all below massif's threshold (1.00%)
+           n0: 6020 in 3 places, all below massif's threshold (1.00%)
+       n0: 2371 in 1 place, below massif's threshold (1.00%)
+    n0: 15390 in 1 place, below massif's threshold (1.00%)
+ n2: 30856 0x50EBF27: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 23432 0x50E80EB: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 23432 in 10 places, all below massif's threshold (1.00%)
+  n0: 7424 in 3 places, all below massif's threshold (1.00%)
+ n1: 24423 0x50E67DB: mca_base_var_generate_full_name4 (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n0: 24423 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=110975879
+mem_heap_B=1468609
+mem_heap_extra_B=235071
+mem_stacks_B=0
+heap_tree=detailed
+n10: 1468609 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 363400 0x77B1C94: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+  n1: 363400 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 363400 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 363400 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+     n1: 363400 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+      n1: 363400 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+       n1: 363400 0x719C827: ???
+        n1: 363400 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+         n1: 363400 0x404491: ??? (in /usr/bin/orterun)
+          n1: 363400 0x403614: ??? (in /usr/bin/orterun)
+           n0: 363400 0x558582E: (below main) (libc-start.c:291)
+ n4: 320250 0x55EF8D8: strdup (strdup.c:42)
+  n1: 169358 0x77B1E19: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 169358 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 169358 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+     n1: 169358 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+      n1: 169358 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+       n1: 169358 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+        n1: 169358 0x719C827: ???
+         n1: 169358 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+          n1: 169358 0x404491: ??? (in /usr/bin/orterun)
+           n1: 169358 0x403614: ??? (in /usr/bin/orterun)
+            n0: 169358 0x558582E: (below main) (libc-start.c:291)
+  n1: 97856 0x77B1D28: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+   n1: 97856 0x77B1EF0: ??? (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+    n1: 97856 0x77B2092: pci_device_get_device_name (in /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1)
+     n1: 97856 0x75AB880: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+      n1: 97856 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+       n1: 97856 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+        n1: 97856 0x719C827: ???
+         n1: 97856 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+          n1: 97856 0x404491: ??? (in /usr/bin/orterun)
+           n1: 97856 0x403614: ??? (in /usr/bin/orterun)
+            n0: 97856 0x558582E: (below main) (libc-start.c:291)
+  n0: 27474 in 74 places, all below massif's threshold (1.00%)
+  n1: 25562 0x50E81CC: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 25562 in 147 places, all below massif's threshold (1.00%)
+ n0: 214198 in 360 places, all below massif's threshold (1.00%)
+ n5: 178752 0x50C7B3F: opal_hash_table_init2 (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 66272 0x50E77FC: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+      n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+       n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n1: 66272 0x50E9A94: mca_base_pvar_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 66272 0x50E7856: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 66272 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 66272 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 66272 0x403DD5: ??? (in /usr/bin/orterun)
+       n1: 66272 0x403614: ??? (in /usr/bin/orterun)
+        n0: 66272 0x558582E: (below main) (libc-start.c:291)
+  n1: 17312 0x50EBC64: mca_base_var_group_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n1: 17312 0x50E784B: mca_base_var_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 17312 0x50CCAB6: opal_init_util (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+     n1: 17312 0x50CCBE4: opal_init (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+      n1: 17312 0x403DD5: ??? (in /usr/bin/orterun)
+       n1: 17312 0x403614: ??? (in /usr/bin/orterun)
+        n0: 17312 0x558582E: (below main) (libc-start.c:291)
+  n1: 17312 0xC3154B4: ???
+   n1: 17312 0x50FD912: opal_db_base_select (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+    n1: 17312 0x719C134: ???
+     n1: 17312 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+      n1: 17312 0x404491: ??? (in /usr/bin/orterun)
+       n1: 17312 0x403614: ??? (in /usr/bin/orterun)
+        n0: 17312 0x558582E: (below main) (libc-start.c:291)
+  n0: 11584 in 3 places, all below massif's threshold (1.00%)
+ n1: 131072 0xACD6EA8: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+  n1: 131072 0xACD6FB8: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+   n1: 131072 0xAC544EE: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+    n1: 131072 0xAB534BB: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+     n1: 131072 0xAB53456: ??? (in /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.367.57)
+      n1: 131072 0x73A3D2E: ??? (in /usr/lib/x86_64-linux-gnu/libOpenCL.so.1.0.0)
+       n1: 131072 0x73A4231: clGetPlatformIDs (in /usr/lib/x86_64-linux-gnu/libOpenCL.so.1.0.0)
+        n1: 131072 0x6D932F3: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_opencl.so)
+         n1: 131072 0x594000F: hwloc_backends_notify_new_object (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+          n1: 131072 0x59441FA: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+           n1: 131072 0x59442B7: hwloc_insert_pci_device_list (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+            n1: 131072 0x75AB9A3: ??? (in /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so)
+             n1: 131072 0x593A23B: hwloc_topology_load (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+              n1: 131072 0x51123D1: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+               n1: 131072 0x719C827: ???
+                n1: 131072 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+                 n1: 131072 0x404491: ??? (in /usr/bin/orterun)
+                  n1: 131072 0x403614: ??? (in /usr/bin/orterun)
+                   n0: 131072 0x558582E: (below main) (libc-start.c:291)
+ n2: 80000 0x50E8137: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 43040 0x50E8AFA: mca_base_component_var_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 43040 in 83 places, all below massif's threshold (1.00%)
+  n0: 36960 in 148 places, all below massif's threshold (1.00%)
+ n1: 72704 0xA58FEFE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  n1: 72704 0x40104E8: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40105F9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4015710: dl_open_worker (dl-open.c:575)
+     n1: 72704 0x4010392: _dl_catch_error (dl-error.c:187)
+      n1: 72704 0x4014BD7: _dl_open (dl-open.c:660)
+       n1: 72704 0x5B68F07: dlopen_doit (dlopen.c:66)
+        n1: 72704 0x4010392: _dl_catch_error (dl-error.c:187)
+         n1: 72704 0x5B6956F: _dlerror_run (dlerror.c:163)
+          n1: 72704 0x5B68F9F: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 72704 0x63880A0: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+            n1: 72704 0x6384C56: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+             n1: 72704 0x6386872: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+              n1: 72704 0x6387173: lt_dlopenadvise (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+               n1: 72704 0x638723E: lt_dlopenext (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                n1: 72704 0x593E989: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                 n1: 72704 0x6385819: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                  n1: 72704 0x6385223: ??? (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                   n1: 72704 0x6385DB7: lt_dlforeachfile (in /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1)
+                    n1: 72704 0x593F1B5: ??? (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                     n1: 72704 0x59389C5: hwloc_topology_init (in /usr/lib/x86_64-linux-gnu/libhwloc.so.5.6.8)
+                      n1: 72704 0x51123B4: opal_hwloc_base_get_topology (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                       n1: 72704 0x719C827: ???
+                        n1: 72704 0x4E45604: orte_init (in /usr/lib/openmpi/lib/libopen-rte.so.12.0.2)
+                         n1: 72704 0x404491: ??? (in /usr/bin/orterun)
+                          n1: 72704 0x403614: ??? (in /usr/bin/orterun)
+                           n0: 72704 0x558582E: (below main) (libc-start.c:291)
+ n1: 52954 0x400BA24: _dl_new_object (dl-object.c:75)
+  n1: 52954 0x400633B: _dl_map_object_from_fd (dl-load.c:1006)
+   n2: 52954 0x4008A55: _dl_map_object (dl-load.c:2476)
+    n1: 37564 0x40153A5: dl_open_worker (dl-open.c:237)
+     n1: 37564 0x4010392: _dl_catch_error (dl-error.c:187)
+      n2: 37564 0x4014BD7: _dl_open (dl-open.c:660)
+       n1: 35193 0x5B68F07: dlopen_doit (dlopen.c:66)
+        n1: 35193 0x4010392: _dl_catch_error (dl-error.c:187)
+         n1: 35193 0x5B6956F: _dlerror_run (dlerror.c:163)
+          n2: 35193 0x5B68F9F: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 29173 0x50FE892: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+            n1: 29173 0x50E1BF2: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+             n1: 29173 0x50E305D: mca_base_component_find (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+              n1: 29173 0x50ECA5F: mca_base_framework_components_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+               n1: 29173 0x50ECEBE: mca_base_framework_register (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                n1: 29173 0x50ECF10: mca_base_framework_open (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+                 n0: 29173 in 18 places, all below massif's threshold (1.00%)
+           n0: 6020 in 3 places, all below massif's threshold (1.00%)
+       n0: 2371 in 1 place, below massif's threshold (1.00%)
+    n0: 15390 in 1 place, below massif's threshold (1.00%)
+ n2: 30856 0x50EBF27: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n1: 23432 0x50E80EB: ??? (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+   n0: 23432 in 10 places, all below massif's threshold (1.00%)
+  n0: 7424 in 3 places, all below massif's threshold (1.00%)
+ n1: 24423 0x50E67DB: mca_base_var_generate_full_name4 (in /usr/lib/openmpi/lib/libopen-pal.so.13.0.2)
+  n0: 24423 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=113019045
+mem_heap_B=1399286
+mem_heap_extra_B=230346
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=113141905
+mem_heap_B=1347941
+mem_heap_extra_B=221035
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=113264739
+mem_heap_B=1199417
+mem_heap_extra_B=175935
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=113406089
+mem_heap_B=1016432
+mem_heap_extra_B=159424
+mem_stacks_B=0
+heap_tree=empty
