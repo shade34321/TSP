@@ -6,10 +6,6 @@
 #ifndef tsp_mpi_h
 #define tsp_mpi_h
 
-const int INFINITY = 1000000;
-const int NO_CITY = -1;
-const int FALSE = 0;
-const int TRUE = 1;
 const int MAX_STRING = 1000;
 const int TOUR_TAG = 1;
 const int INIT_COST_MSGS = 100;
@@ -63,12 +59,7 @@ cost_t best_tour_cost;
 MPI_Datatype tour_arr_mpi_t;  // For storing the list of cities
 char* mpi_buffer;
 
-#ifdef STATS
-/* For stats */
-int best_costs_bcast = 0;
-int best_costs_received = 0;
-#endif
-
+void print_usage(int num_arguments, char *args[]);
 void Usage(char* prog_name);
 void Read_digraph(FILE* digraph_file);
 void Print_digraph(void);

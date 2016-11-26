@@ -12,10 +12,15 @@ cd mpi/
 ./build_mpi.sh
 cd -
 
-valgrind --tool=massif bin/tsp 15_city.txt 15
-valgrind --tool=massif bin/tour_tsp 15_city.txt 15
+bin/tsp 15_city.txt 15
+sleep 60
+bin/tour_tsp 15_city.txt 15
+#valgrind --tool=massif bin/tsp 15_city.txt 15
+#valgrind --tool=massif bin/tour_tsp 15_city.txt 15
 for i in 1 2 4 6 8 12 15
 do
 	echo "Running with ${i} processes"
-	valgrind --tool=massif mpiexec -n ${i} bin/tsp_mpi book_15_city.txt
+	mpiexec -n ${i} bin/tsp_mpi book_15_city.txt
+	#valgrind --tool=massif mpiexec -n ${i} bin/tsp_mpi book_15_city.txt
+    sleep 60
 done

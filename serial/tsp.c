@@ -41,7 +41,9 @@ int main(int argc, char *argv[]) {
     print_tour(best_tour);
     destroy_tour(best_tour);
     printf("Recursive time: %f\n", rec_stoptime - rec_starttime);
-    
+
+    sleep(60);
+
     printf("Iterative 1\n");
     best_tour = init_tour(100000000, starting_city);
     double iter_1_starttime = get_timestamp();

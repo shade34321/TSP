@@ -1,0 +1,57 @@
+mv: cannot move ‘bin’ to ‘bin_bkup/bin’: File exists
+mkdir: cannot create directory ‘bin’: File exists
+/home/shade/Documents/school/cs_7172/TSP
+/home/shade/Documents/school/cs_7172/TSP
+Recursive DFS
+Recursive Best Tour: 
+0 -> 10 -> 3 -> 5 -> 7 -> 9 -> 13 -> 11 -> 2 -> 6 -> 4 -> 8 -> 14 -> 1 -> 12 -> 0
+Cost: 291
+Cities in Tour: 16
+Recursive time: 29290849.000000
+Iterative 1
+Iterative 1 Best Tour: 
+0 -> 10 -> 3 -> 5 -> 7 -> 9 -> 13 -> 11 -> 2 -> 6 -> 4 -> 8 -> 14 -> 1 -> 12 -> 0
+Cost: 291
+Cities in Tour: 16
+Recursive time: 53687138.000000
+Second Iterative 
+Iterative 2 Best Tour: 
+0 -> 10 -> 3 -> 5 -> 7 -> 9 -> 13 -> 11 -> 2 -> 6 -> 4 -> 8 -> 14 -> 1 -> 12 -> 0
+Cost: 291
+Cities in Tour: 16
+Second iterative time: 41643137.000000
+Running with 1 processes
+Proc 0 > Best tour 0x11441e0: 0 10 3 5 7 9 13 11 2 6 4 8 14 1 12 0 
+
+Cost = 291
+Elapsed time = 4.976137e+01 seconds
+Running with 2 processes
+Proc 0 > Best tour 0xa49d90: 0 10 3 5 7 9 13 11 2 6 4 8 14 1 12 0 
+
+Cost = 291
+Elapsed time = 3.329461e+01 seconds
+Running with 4 processes
+Proc 0 > Best tour 0x18588b0: 0 12 1 14 8 4 6 2 11 13 9 7 5 3 10 0 
+
+Cost = 291
+Elapsed time = 1.605435e+01 seconds
+Running with 6 processes
+Proc 0 > Best tour 0x2359180: 0 10 3 5 7 9 13 11 2 6 4 8 14 1 12 0 
+
+Cost = 291
+Elapsed time = 3.283589e+01 seconds
+Running with 8 processes
+Proc 0 > Best tour 0x2582770: 0 10 3 5 7 9 13 11 2 6 4 8 14 1 12 0 
+
+Cost = 291
+Elapsed time = 4.392861e+01 seconds
+Running with 12 processes
+Proc 0 > Best tour 0x1129cb0: 0 10 3 5 7 9 13 11 2 6 4 8 14 1 12 0 
+
+Cost = 291
+Elapsed time = 3.544321e+01 seconds
+Running with 15 processes
+Proc 0 > Best tour 0x147fe20: 0 10 3 5 7 9 13 11 2 6 4 8 14 1 12 0 
+
+Cost = 291
+Elapsed time = 4.093696e+01 seconds
